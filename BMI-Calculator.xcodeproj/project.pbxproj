@@ -8,21 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */; };
-		BD79A0F62B33840600E4BE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0F52B33840600E4BE31 /* ContentView.swift */; };
 		BD79A0F82B33840700E4BE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD79A0F72B33840700E4BE31 /* Assets.xcassets */; };
 		BD79A0FB2B33840700E4BE31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD79A0FA2B33840700E4BE31 /* Preview Assets.xcassets */; };
 		BD79A0FD2B33840700E4BE31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0FC2B33840700E4BE31 /* Persistence.swift */; };
 		BD79A1002B33840700E4BE31 /* BMI_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0FE2B33840700E4BE31 /* BMI_Calculator.xcdatamodeld */; };
+		BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAB2B338A82006D27AE /* BMIView.swift */; };
+		BDE7BEAE2B338CF5006D27AE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAD2B338CF5006D27AE /* ProfileView.swift */; };
+		BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAF2B338D5A006D27AE /* TargetView.swift */; };
+		BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB12B338DCB006D27AE /* ChartView.swift */; };
+		BDE7BEB52B338EAE006D27AE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB42B338EAE006D27AE /* RegisterView.swift */; };
+		BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */; };
+		BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB82B339153006D27AE /* TabsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD79A0F02B33840600E4BE31 /* BMI-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorApp.swift; sourceTree = "<group>"; };
-		BD79A0F52B33840600E4BE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD79A0F72B33840700E4BE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD79A0FA2B33840700E4BE31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD79A0FC2B33840700E4BE31 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BD79A0FF2B33840700E4BE31 /* BMI_Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BMI_Calculator.xcdatamodel; sourceTree = "<group>"; };
+		BDE7BEAB2B338A82006D27AE /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
+		BDE7BEAD2B338CF5006D27AE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BDE7BEAF2B338D5A006D27AE /* TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
+		BDE7BEB12B338DCB006D27AE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		BDE7BEB42B338EAE006D27AE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBMIView.swift; sourceTree = "<group>"; };
+		BDE7BEB82B339153006D27AE /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +67,9 @@
 		BD79A0F22B33840600E4BE31 /* BMI-Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				BDE7BEA72B3385B0006D27AE /* Model */,
+				BDE7BEAA2B3385D6006D27AE /* Views */,
 				BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */,
-				BD79A0F52B33840600E4BE31 /* ContentView.swift */,
 				BD79A0F72B33840700E4BE31 /* Assets.xcassets */,
 				BD79A0FC2B33840700E4BE31 /* Persistence.swift */,
 				BD79A0FE2B33840700E4BE31 /* BMI_Calculator.xcdatamodeld */,
@@ -71,6 +84,27 @@
 				BD79A0FA2B33840700E4BE31 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BDE7BEA72B3385B0006D27AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDE7BEAA2B3385D6006D27AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDE7BEAB2B338A82006D27AE /* BMIView.swift */,
+				BDE7BEAD2B338CF5006D27AE /* ProfileView.swift */,
+				BDE7BEAF2B338D5A006D27AE /* TargetView.swift */,
+				BDE7BEB12B338DCB006D27AE /* ChartView.swift */,
+				BDE7BEB42B338EAE006D27AE /* RegisterView.swift */,
+				BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */,
+				BDE7BEB82B339153006D27AE /* TabsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE7BEB52B338EAE006D27AE /* RegisterView.swift in Sources */,
 				BD79A1002B33840700E4BE31 /* BMI_Calculator.xcdatamodeld in Sources */,
+				BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */,
 				BD79A0FD2B33840700E4BE31 /* Persistence.swift in Sources */,
-				BD79A0F62B33840600E4BE31 /* ContentView.swift in Sources */,
+				BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */,
+				BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */,
+				BDE7BEAE2B338CF5006D27AE /* ProfileView.swift in Sources */,
 				BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */,
+				BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */,
+				BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
