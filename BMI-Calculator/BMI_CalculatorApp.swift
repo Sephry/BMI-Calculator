@@ -13,7 +13,7 @@ struct BMI_CalculatorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabsView()
+            RootView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

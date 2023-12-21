@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B92" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bm" representedClassName="Bm" syncable="YES" codeGenerationType="class"/>
+    <entity name="BmiCalc" representedClassName="BmiCalc" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES"/>
+        <attribute name="attribute1" optional="YES"/>
+        <attribute name="attribute2" optional="YES"/>
+        <attribute name="attribute3" optional="YES"/>
+        <attribute name="attribute4" optional="YES"/>
+        <attribute name="attribute5" optional="YES"/>
+        <attribute name="attribute6" optional="YES"/>
+        <attribute name="attribute7" optional="YES"/>
+        <attribute name="attribute8" optional="YES"/>
+        <attribute name="attribute9" optional="YES"/>
+        <attribute name="attribute10" optional="YES"/>
+        <attribute name="attribute11" optional="YES"/>
+        <attribute name="attribute12" optional="YES"/>
+        <attribute name="attribute13" optional="YES"/>
+        <attribute name="attribute14" optional="YES"/>
+        <attribute name="attribute15" optional="YES"/>
+        <attribute name="attribute16" optional="YES"/>
+        <attribute name="attribute17" optional="YES"/>
+        <attribute name="attribute18" optional="YES"/>
+    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-    </elements>
 </model>
