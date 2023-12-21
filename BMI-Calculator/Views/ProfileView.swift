@@ -22,6 +22,7 @@ struct ProfileView: View {
                                     Image(systemName: "person")
                                         .resizable()
                                         .frame(width:100, height: 100, alignment: .center)
+                                        .padding()
                                     Text("İsmail KURT")
                                         .font(.title)
                                     Text("ismail.kurt@gmail.com")
@@ -43,6 +44,7 @@ struct ProfileView: View {
                                     }
                                     .background(Color.blue)
                                     .cornerRadius(25)
+                                    .padding()
                                 }
                                 Spacer()
                             }
