@@ -12,7 +12,15 @@ struct OnboardingRootView: View {
     @Binding var userName: String
     
     var body: some View {
-        TextField("Enter your Name", text: $userName)
+        VStack{
+            TextField("Enter your Name", text: $userName)
+            Button{
+                userName = "Alperen Sik"
+                UserDefaults.standard.set(false, forKey: "isFirstTimeLaunch")
+            }label: {
+                Text("Press")
+            }
+        }
     }
 }
 

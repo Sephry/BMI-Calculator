@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @Binding var currentTab: String
+    @Binding var currentTab: Int
 
     var body: some View {
         Text("Hello, World! Profile")
@@ -16,5 +16,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView(currentTab: .constant("Profile"))
+    ProfileView(currentTab: .constant(1))
 }

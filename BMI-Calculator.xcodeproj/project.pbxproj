@@ -14,6 +14,8 @@
 		BDC1F2C62B34A91E004DCA70 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2C52B34A91E004DCA70 /* RootView.swift */; };
 		BDC1F2C92B34AA5B004DCA70 /* OnboardingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2C82B34AA5B004DCA70 /* OnboardingRootView.swift */; };
 		BDC1F2CC2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2CA2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld */; };
+		BDC1F2CE2B34C8AC004DCA70 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2CD2B34C8AC004DCA70 /* TabbedItems.swift */; };
+		BDC1F2D22B34CBEA004DCA70 /* ShapeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2D12B34CBEA004DCA70 /* ShapeExtensions.swift */; };
 		BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAB2B338A82006D27AE /* BMIView.swift */; };
 		BDE7BEAE2B338CF5006D27AE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAD2B338CF5006D27AE /* ProfileView.swift */; };
 		BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAF2B338D5A006D27AE /* TargetView.swift */; };
@@ -31,6 +33,8 @@
 		BDC1F2C52B34A91E004DCA70 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BDC1F2C82B34AA5B004DCA70 /* OnboardingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRootView.swift; sourceTree = "<group>"; };
 		BDC1F2CB2B34AC97004DCA70 /* BMI-Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BMI-Calculator.xcdatamodel"; sourceTree = "<group>"; };
+		BDC1F2CD2B34C8AC004DCA70 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
+		BDC1F2D12B34CBEA004DCA70 /* ShapeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExtensions.swift; sourceTree = "<group>"; };
 		BDE7BEAB2B338A82006D27AE /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
 		BDE7BEAD2B338CF5006D27AE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDE7BEAF2B338D5A006D27AE /* TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		BD79A0F22B33840600E4BE31 /* BMI-Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				BDC1F2CF2B34CBD9004DCA70 /* Helpers */,
 				BDE7BEA72B3385B0006D27AE /* Model */,
 				BDE7BEAA2B3385D6006D27AE /* Views */,
 				BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */,
@@ -96,9 +101,26 @@
 			path = OnboardingViews;
 			sourceTree = "<group>";
 		};
+		BDC1F2CF2B34CBD9004DCA70 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BDC1F2D02B34CBDF004DCA70 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BDC1F2D02B34CBDF004DCA70 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDC1F2D12B34CBEA004DCA70 /* ShapeExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BDE7BEA72B3385B0006D27AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDC1F2CD2B34C8AC004DCA70 /* TabbedItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,10 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC1F2D22B34CBEA004DCA70 /* ShapeExtensions.swift in Sources */,
 				BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */,
 				BD79A0FD2B33840700E4BE31 /* Persistence.swift in Sources */,
 				BDC1F2CC2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld in Sources */,
 				BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */,
+				BDC1F2CE2B34C8AC004DCA70 /* TabbedItems.swift in Sources */,
 				BDC1F2C92B34AA5B004DCA70 /* OnboardingRootView.swift in Sources */,
 				BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */,
 				BDE7BEAE2B338CF5006D27AE /* ProfileView.swift in Sources */,

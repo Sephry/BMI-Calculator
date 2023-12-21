@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EnterBMIView: View {
-    @Binding var currentTab: String
+    @Binding var currentTab: Int
     
     var body: some View {
         Text("Hello, World!Enter BMI")
@@ -16,5 +16,5 @@ struct EnterBMIView: View {
 }
 
 #Preview {
-    EnterBMIView(currentTab: .constant("EnterBMI"))
+    EnterBMIView(currentTab: .constant(1))
 }

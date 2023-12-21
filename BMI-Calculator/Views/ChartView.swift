@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChartView: View {
-    @Binding var currentTab: String
+    @Binding var currentTab: Int
     
     var body: some View {
         Image(systemName: "chart.line.uptrend.xyaxis")
@@ -19,5 +19,5 @@ struct ChartView: View {
 }
 
 #Preview {
-    ChartView(currentTab: .constant("Chart"))
+    ChartView(currentTab: .constant(1))
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TargetView: View {
-    @Binding var currentTab: String
+    @Binding var currentTab: Int
     
     var body: some View {
         Text("target")
@@ -16,5 +16,5 @@ struct TargetView: View {
 }
 
 #Preview {
-    TargetView(currentTab: .constant("Target"))
+    TargetView(currentTab: .constant(1))
 }

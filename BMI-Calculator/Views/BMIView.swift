@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct BMIView: View {
-    @Binding var currentTab: String
+    @Binding var currentTab: Int
     
     var body: some View {
-        Text("BMI")
+        VStack{
+            Text("sa")
+            Spacer()
+            
+            Text("as")
+            
+        }
     }
 }
 
 #Preview {
-    BMIView(currentTab: .constant("BMI"))
+    BMIView(currentTab: .constant(1))
 }
