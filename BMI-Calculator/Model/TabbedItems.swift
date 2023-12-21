@@ -17,7 +17,7 @@ enum TabbedItems: Int, CaseIterable{
     var iconName:String{
         switch self {
         case .bmi:
-            "ruler.fill"
+            "list.clipboard"
         case .target:
             "target"
         case .enterBmi:
@@ -32,7 +32,7 @@ enum TabbedItems: Int, CaseIterable{
     var iconText:String{
         switch self {
         case .bmi:
-            "BMİ"
+            "BMI"
         case .target:
             "Target"
         case .enterBmi:
