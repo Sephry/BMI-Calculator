@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD569C712B3831900091847D /* BmiModel.xcdatamodeld */; };
+		BD569C752B3831A20091847D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD569C742B3831A20091847D /* DataController.swift */; };
 		BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */; };
 		BD79A0F82B33840700E4BE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD79A0F72B33840700E4BE31 /* Assets.xcassets */; };
 		BD79A0FB2B33840700E4BE31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD79A0FA2B33840700E4BE31 /* Preview Assets.xcassets */; };
-		BD79A0FD2B33840700E4BE31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0FC2B33840700E4BE31 /* Persistence.swift */; };
 		BDC1F2C62B34A91E004DCA70 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2C52B34A91E004DCA70 /* RootView.swift */; };
 		BDC1F2C92B34AA5B004DCA70 /* OnboardingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2C82B34AA5B004DCA70 /* OnboardingRootView.swift */; };
-		BDC1F2CC2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2CA2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld */; };
 		BDC1F2CE2B34C8AC004DCA70 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2CD2B34C8AC004DCA70 /* TabbedItems.swift */; };
 		BDC1F2D22B34CBEA004DCA70 /* ShapeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1F2D12B34CBEA004DCA70 /* ShapeExtensions.swift */; };
 		BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEAB2B338A82006D27AE /* BMIView.swift */; };
@@ -26,14 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD569C722B3831900091847D /* BmiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BmiModel.xcdatamodel; sourceTree = "<group>"; };
+		BD569C742B3831A20091847D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BD79A0F02B33840600E4BE31 /* BMI-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorApp.swift; sourceTree = "<group>"; };
 		BD79A0F72B33840700E4BE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD79A0FA2B33840700E4BE31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BD79A0FC2B33840700E4BE31 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BDC1F2C52B34A91E004DCA70 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BDC1F2C82B34AA5B004DCA70 /* OnboardingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRootView.swift; sourceTree = "<group>"; };
-		BDC1F2CB2B34AC97004DCA70 /* BMI-Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BMI-Calculator.xcdatamodel"; sourceTree = "<group>"; };
 		BDC1F2CD2B34C8AC004DCA70 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
 		BDC1F2D12B34CBEA004DCA70 /* ShapeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExtensions.swift; sourceTree = "<group>"; };
 		BDE7BEAB2B338A82006D27AE /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
@@ -56,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD569C702B38316B0091847D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD569C712B3831900091847D /* BmiModel.xcdatamodeld */,
+				BD569C742B3831A20091847D /* DataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		BD79A0E72B33840600E4BE31 = {
 			isa = PBXGroup;
 			children = (
@@ -75,13 +84,12 @@
 		BD79A0F22B33840600E4BE31 /* BMI-Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				BD569C702B38316B0091847D /* DataModel */,
 				BDC1F2CF2B34CBD9004DCA70 /* Helpers */,
 				BDE7BEA72B3385B0006D27AE /* Model */,
 				BDE7BEAA2B3385D6006D27AE /* Views */,
 				BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */,
 				BD79A0F72B33840700E4BE31 /* Assets.xcassets */,
-				BD79A0FC2B33840700E4BE31 /* Persistence.swift */,
-				BDC1F2CA2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld */,
 				BD79A0F92B33840700E4BE31 /* Preview Content */,
 			);
 			path = "BMI-Calculator";
@@ -215,14 +223,14 @@
 			files = (
 				BDC1F2D22B34CBEA004DCA70 /* ShapeExtensions.swift in Sources */,
 				BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */,
-				BD79A0FD2B33840700E4BE31 /* Persistence.swift in Sources */,
-				BDC1F2CC2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld in Sources */,
 				BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */,
+				BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */,
 				BDC1F2CE2B34C8AC004DCA70 /* TabbedItems.swift in Sources */,
 				BDC1F2C92B34AA5B004DCA70 /* OnboardingRootView.swift in Sources */,
 				BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */,
 				BDE7BEAE2B338CF5006D27AE /* ProfileView.swift in Sources */,
 				BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */,
+				BD569C752B3831A20091847D /* DataController.swift in Sources */,
 				BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */,
 				BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */,
 				DBE9DC962B34E88000850693 /* CustomTextFieldStyle.swift in Sources */,
@@ -434,13 +442,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BDC1F2CA2B34AC97004DCA70 /* BMI-Calculator.xcdatamodeld */ = {
+		BD569C712B3831900091847D /* BmiModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BDC1F2CB2B34AC97004DCA70 /* BMI-Calculator.xcdatamodel */,
+				BD569C722B3831900091847D /* BmiModel.xcdatamodel */,
 			);
-			currentVersion = BDC1F2CB2B34AC97004DCA70 /* BMI-Calculator.xcdatamodel */;
-			path = "BMI-Calculator.xcdatamodeld";
+			currentVersion = BD569C722B3831900091847D /* BmiModel.xcdatamodel */;
+			path = BmiModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

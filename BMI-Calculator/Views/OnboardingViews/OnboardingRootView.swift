@@ -56,10 +56,10 @@ struct OnboardingRootView: View {
                     }
                     .padding()
                     .foregroundColor(.white)
-                }.ignoresSafeArea()
+                }
+                
                 .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .bottom)
-            }
-        }
+            }        }.ignoresSafeArea()
     }
 }
 

@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct BMI_CalculatorApp: App {
-    let persistenceController = PersistenceController.shared
+    
+    @StateObject private var dataController = DataController()
     var defaults = UserDefaults.standard
 
     init(){
@@ -22,7 +23,7 @@ struct BMI_CalculatorApp: App {
         
         WindowGroup {
             RootView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
                 .preferredColorScheme(.light)
         }
     }
