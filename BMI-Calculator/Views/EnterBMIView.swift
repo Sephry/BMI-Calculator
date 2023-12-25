@@ -14,9 +14,9 @@ struct EnterBMIView: View {
     
     @State private var height: Double = 0
     @State private var weight: Double = 0
-    @State private var kgOrLbs: String = ""
+    @State private var kgOrLbs: String = "KG"
     @State private var age = 0
-    @State private var gender = "Male"
+    @State private var gender = true
     @State private var result = 0
     let options = ["KG","LBS"]
     
@@ -32,31 +32,57 @@ struct EnterBMIView: View {
                         Button(action: {}) {
                             Image(systemName: "list.bullet")
                                 .imageScale(.large)
-                                .padding()
+                                .foregroundColor(Color.TextColor)
                         }
-                        
+                        .padding(.horizontal)
+                        .padding(.top)
                         Spacer()
-                        
                         Button(action: {}) {
                             Image(systemName: "bell.fill")
                                 .imageScale(.large)
-                                .padding()
+                                .foregroundColor(Color.TextColor)
                         }
+                        .padding(.horizontal)
+                        .padding(.top)
                     }
                     Text("Hi ...\(userName)")
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color.TextColor)
                         .font(.largeTitle)
                         .cornerRadius(20)
                         .padding(.leading, 40)
-                        .padding(.all, 20)
+                        .padding(.all, 10)
                 }
                 .background(
-                    LinearGradient(gradient: Gradient(colors: [.green, .teal]), startPoint: .top, endPoint: .bottom)
+                    LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
                 )
             }
             
             Form {
+                VStack {
+                    HStack{
+                        Image("man")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 120)
+                            .padding(20)
+                            .background{
+                                Circle().fill(Color.PrimaryColor)
+                            }
+                        Image("woman")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 120)
+                            .padding(20)
+                            .background{
+                                Circle().fill(Color.PrimaryColor)
+                            }
+                    }
+                    .padding(.top)
+                    
+                    Toggle("Male", isOn: $gender)
+                    
+                }
                 
                 Section {
                     HStack {
@@ -64,8 +90,8 @@ struct EnterBMIView: View {
                             .padding()
                         TextField("Yaş", value: $age, format: .number)
                             .keyboardType(.numberPad)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .PrimaryColor))
-                            .foregroundColor(.black)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
+                            .foregroundColor(Color.TextColor)
                             .padding()
                     }
                     HStack {
@@ -73,8 +99,8 @@ struct EnterBMIView: View {
                             .padding()
                         TextField("Boy", value: $height, format: .number)
                             .keyboardType(.numberPad)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .PrimaryColor))
-                            .foregroundColor(.black)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
+                            .foregroundColor(Color.TextColor)
                             .padding()
                     }
                     HStack {
@@ -82,42 +108,47 @@ struct EnterBMIView: View {
                             .padding()
                         TextField("Kilo", value: $weight, format: .number)
                             .keyboardType(.numberPad)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .PrimaryColor))
-                        
-                            .foregroundColor(.black)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
+                            .foregroundColor(Color.TextColor)
                             .padding(.leading)
                         
-                        Picker("", selection: $kgOrLbs){
-                            ForEach(options, id:\.self){
-                                option in Text(option)
+                        Menu {
+                            Picker(selection: $kgOrLbs) {
+                                ForEach(options, id:\.self) { value in
+                                    Text(value)
+                                        .tag(value)
+                                }
+                            } label: {}
+                        } label: {
+                            
+                            HStack {
+                                Text(kgOrLbs)
+                                Image(systemName: "chevron.up.chevron.down")
                             }
+                            .foregroundColor(Color.TextColor)
+                            .frame(width: 70)
                         }
-                        .frame(width: 70)
-                        
-                        
-                   
                     }
+                    
                     
                     HStack {
                         Spacer()
                         Button("Submit") {
-                            DataController().addBmi(age: 22, weight: 75, height: 175, gender: "Male", context: managedObjContext)
+                            DataController().addBmi(age: 22, weight: 75, height: 175, gender: true, context: managedObjContext)
                             dismiss()
                         }
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.TextColor)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.PrimaryColor)
                         .cornerRadius(10)
                         Spacer()
                     }
-                }.listStyle(GroupedListStyle())
-                    .background(Color.BackgroundColor)
+                }
+                .listStyle(GroupedListStyle())
+                .background(Color.BackgroundColor)
                     
             }
-
-            
-            
         }
     }
 }
