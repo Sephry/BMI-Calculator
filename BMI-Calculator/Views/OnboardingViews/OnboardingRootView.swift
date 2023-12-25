@@ -51,8 +51,8 @@ struct OnboardingRootView: View {
                             Spacer()
                             Text("Next")
                                 .padding()
-                                .background(Color.color2)
-                                .foregroundColor(.color1)
+                                .background(Color.text)
+                                .foregroundColor(.text)
                         }
                         .cornerRadius(10)
                         .padding(.top, 20)

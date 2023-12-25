@@ -9,9 +9,8 @@ import Foundation
 import SwiftUI
 
 struct CustomTextFieldStyle: TextFieldStyle {
-    var borderColor: Color = .color1
-    var backgroundColor: Color = .color2
-    
+    var borderColor: Color = Color.background
+    var backgroundColor: Color = Color.primary
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
             .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
