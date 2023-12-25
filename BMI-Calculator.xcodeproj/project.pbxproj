@@ -22,6 +22,7 @@
 		BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB12B338DCB006D27AE /* ChartView.swift */; };
 		BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */; };
 		BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB82B339153006D27AE /* TabsView.swift */; };
+		DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */; };
 		DBE9DC962B34E88000850693 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9DC952B34E88000850693 /* CustomTextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		BDE7BEB12B338DCB006D27AE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBMIView.swift; sourceTree = "<group>"; };
 		BDE7BEB82B339153006D27AE /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		DBE9DC952B34E88000850693 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			children = (
 				BDC1F2D12B34CBEA004DCA70 /* ShapeExtensions.swift */,
 				DBE9DC952B34E88000850693 /* CustomTextFieldStyle.swift */,
+				DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */,
 				BD569C752B3831A20091847D /* DataController.swift in Sources */,
 				BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */,
+				DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */,
 				BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */,
 				DBE9DC962B34E88000850693 /* CustomTextFieldStyle.swift in Sources */,
 				BDC1F2C62B34A91E004DCA70 /* RootView.swift in Sources */,

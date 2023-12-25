@@ -13,10 +13,12 @@ struct EnterBMIView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var height: Double = 0
-    @State private var weight = 0
+    @State private var weight: Double = 0
+    @State private var kgOrLbs: String = ""
     @State private var age = 0
     @State private var gender = "Male"
     @State private var result = 0
+    let options = ["KG","LBS"]
     
     let userName: String
     
@@ -62,7 +64,7 @@ struct EnterBMIView: View {
                             .padding()
                         TextField("Yaş", value: $age, format: .number)
                             .keyboardType(.numberPad)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .white))
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .PrimaryColor))
                             .foregroundColor(.black)
                             .padding()
                     }
@@ -71,7 +73,7 @@ struct EnterBMIView: View {
                             .padding()
                         TextField("Boy", value: $height, format: .number)
                             .keyboardType(.numberPad)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .white))
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .PrimaryColor))
                             .foregroundColor(.black)
                             .padding()
                     }
@@ -80,17 +82,18 @@ struct EnterBMIView: View {
                             .padding()
                         TextField("Kilo", value: $weight, format: .number)
                             .keyboardType(.numberPad)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .white))
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .PrimaryColor))
                         
                             .foregroundColor(.black)
                             .padding(.leading)
                         
-                        Picker("", selection: $weight){
-                            ForEach(30 ..< 151){
-                                number in Text("\(number)")
+                        Picker("", selection: $kgOrLbs){
+                            ForEach(options, id:\.self){
+                                option in Text(option)
                             }
                         }
                         .frame(width: 70)
+                        
                         
                    
                     }
@@ -101,10 +104,18 @@ struct EnterBMIView: View {
                             DataController().addBmi(age: 22, weight: 75, height: 175, gender: "Male", context: managedObjContext)
                             dismiss()
                         }
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.PrimaryColor)
+                        .cornerRadius(10)
                         Spacer()
                     }
-                }
+                }.listStyle(GroupedListStyle())
+                    .background(Color.BackgroundColor)
+                    
             }
+
             
             
         }
