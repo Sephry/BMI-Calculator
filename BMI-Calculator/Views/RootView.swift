@@ -11,11 +11,12 @@ struct RootView: View {
     @State var showOnboarding: Bool = UserDefaults.standard.bool(forKey: "isFirstTimeLaunch")
     @AppStorage("username") var userName: String = ""
     
+    
     var body: some View {
         if showOnboarding {
             OnboardingRootView(userName: $userName)
         } else {
-            TabsView()
+            TabsView(userName: $userName)
         }
     }
 }

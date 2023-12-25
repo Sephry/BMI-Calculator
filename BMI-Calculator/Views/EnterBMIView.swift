@@ -18,27 +18,99 @@ struct EnterBMIView: View {
     @State private var gender = "Male"
     @State private var result = 0
     
+    let userName: String
+    
     var body: some View {
-        Form {
-            Section {
-                VStack {
-                    Text("Height: \(Int(height))")
-                    Slider(value: $height, in: 0...250, step: 1)
-                }
-                
-                HStack {
-                    Spacer()
-                    Button("Submit") {
-                        DataController().addBmi(age: 22, weight: 75, height: 175, gender: "Male", context: managedObjContext)
-                        dismiss()
+        
+        VStack(spacing: 0) {
+            
+            VStack {
+                VStack{
+                    HStack {
+                        Button(action: {}) {
+                            Image(systemName: "list.bullet")
+                                .imageScale(.large)
+                                .padding()
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {}) {
+                            Image(systemName: "bell.fill")
+                                .imageScale(.large)
+                                .padding()
+                        }
                     }
-                    Spacer()
+                    Text("Hi ...\(userName)")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .cornerRadius(20)
+                        .padding(.leading, 40)
+                        .padding(.all, 20)
+                }
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [.green, .teal]), startPoint: .top, endPoint: .bottom)
+                )
+            }
+            
+            Form {
+                
+                Section {
+                    HStack {
+                        Text("Age")
+                            .padding()
+                        TextField("Yaş", value: $age, format: .number)
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .white))
+                            .foregroundColor(.black)
+                            .padding()
+                    }
+                    HStack {
+                        Text("Boy")
+                            .padding()
+                        TextField("Boy", value: $height, format: .number)
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .white))
+                            .foregroundColor(.black)
+                            .padding()
+                    }
+                    HStack {
+                        Text("Kilo")
+                            .padding()
+                        TextField("Kilo", value: $weight, format: .number)
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: .black, backgroundColor: .white))
+                        
+                            .foregroundColor(.black)
+                            .padding(.leading)
+                        
+                        Picker("", selection: $weight){
+                            ForEach(30 ..< 151){
+                                number in Text("\(number)")
+                            }
+                        }
+                        .frame(width: 70)
+                        
+                   
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        Button("Submit") {
+                            DataController().addBmi(age: 22, weight: 75, height: 175, gender: "Male", context: managedObjContext)
+                            dismiss()
+                        }
+                        Spacer()
+                    }
                 }
             }
+            
+            
         }
     }
 }
 
 #Preview {
-    EnterBMIView(currentTab: .constant(1))
+    EnterBMIView(currentTab: .constant(1), userName: "ismail")
 }

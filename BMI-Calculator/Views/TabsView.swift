@@ -10,7 +10,7 @@ import SwiftUI
 struct TabsView: View {
     
     @State private var selectedTab: Int = 0
-    
+    @Binding var userName: String
     var body: some View {
         ZStack(alignment:.bottom){
             VStack(spacing:0){
@@ -22,7 +22,7 @@ struct TabsView: View {
                     TargetView(currentTab: $selectedTab)
                         .tag(1)
                     
-                    EnterBMIView(currentTab: $selectedTab)
+                    EnterBMIView(currentTab: $selectedTab, userName: userName)
                         .tag(2)
                     
                     ChartView(currentTab: $selectedTab)
@@ -87,5 +87,5 @@ struct TabsView: View {
 }
 
 #Preview {
-    TabsView()
+    TabsView(userName: .constant("ismail"))
 }

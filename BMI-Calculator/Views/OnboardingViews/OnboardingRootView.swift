@@ -46,6 +46,7 @@ struct OnboardingRootView: View {
 
                         Button(action: {
                             print("Button tapped!")
+                            
                         }) {
                             Spacer()
                             Text("Next")

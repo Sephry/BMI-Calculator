@@ -24,82 +24,35 @@ struct BMIView: View {
 
 
     var body: some View {
-        ZStack{
-            LinearGradient(gradient: Gradient(colors: [.green, .teal]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-            HStack{
-                
-                Button(action: {
-                                // Sağ üst köşedeki butona tıklandığında yapılacak işlemler
-                                print("Sağ üst köşedeki butona tıklandı")
-                            }) {
-                                Image(systemName: "bell.fill")
-                                    .foregroundColor(.white)
-                                    .imageScale(.large)
-                                    .padding()
-                            }
-//                        .position(x:UIScreen.main.bounds.width - 50 , y: 50)
-                
-                Button(action: {
-                                // Sağ üst köşedeki butona tıklandığında yapılacak işlemler
-                                print("Sağ üst köşedeki butona tıklandı")
-                            }) {
-                                Image(systemName: "list.bullet")
-                                    .foregroundColor(.white)
-                                    .imageScale(.large)
-                                    .padding()
-                            }
-//                        .position(x:50 , y: -335)
-                
-                
-            }
+        VStack{
             VStack{
-                Text("Hi ...")
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .padding()
-                
-                
                 Rectangle()
-                    .fill(Color.white)
+                    .fill(Color.red)
                     .frame(height: UIScreen.main.bounds.height )
                     .cornerRadius(20)
                     .overlay(
                         VStack{
                             HStack{
                                 
-                                Button("buton1"){
-                                    print("buton1")
-                                }.foregroundColor(.black)
-                                    .padding()
-                                Button("buton2"){
-                                    print("buton2")
-                                    
-                                }
-                                .foregroundColor(.blue)
-                                .padding()
+                                Button(action: {}) {
+                                                Image(systemName: "person")
+                                                    .imageScale(.large)
+                                                    .padding()
+                                            }
+                                Button(action: {}) {
+                                                Image(systemName: "person")
+                                                    .imageScale(.large)
+                                                    .padding()
+                                            }
                                
                                 
                             }
                             
-                            Toggle(selectedOption.rawValue, isOn: Binding(get: {self.selectedOption == .option2}, set: {newValue in self.selectedOption = newValue ? .option2 : .option1}
-                                                                         ))
-                            .frame(width: 100, height: 100)
                             
-                            .foregroundColor(.black)
-                            .padding()
                             
                             
                             HStack{
-                                Section{
-                                    Text("asd")
-                                        .padding()
-                                    TextField("Yaş", text: $userInput)
-                                        .textFieldStyle(CustomTextFieldStyle(borderColor: .white, backgroundColor: .cyan))
-                                        .foregroundColor(.black)
-                                        .cornerRadius(20)
-                                        .padding()
-                                }
+                                
                                
                             }
                             
@@ -148,7 +101,8 @@ struct BMIView: View {
                     )
                 
                 
-            }.position(x:UIScreen.main.bounds.width / 2,y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 3))
+            }
+            .position(x:UIScreen.main.bounds.width / 2,y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 3))
         
             
                     
