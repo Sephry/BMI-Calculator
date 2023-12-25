@@ -12,12 +12,13 @@ struct OnboardingRootView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                Spacer()
+                Spacer(minLength: 100)
                 Image("hi")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .padding(.bottom, 20)
+                    
 
                 Text("Merhaba")
                     .font(.title)
@@ -27,7 +28,7 @@ struct OnboardingRootView: View {
                 
                 ZStack {
                     Rectangle()
-                        .fill(  LinearGradient(gradient: Gradient(colors: [.white, .gray]), startPoint: .bottom, endPoint: .top))
+                        .fill(  LinearGradient(gradient: Gradient(colors: [.white, .white]), startPoint: .bottom, endPoint: .top))
                         .frame(height: 300)
                         .cornerRadius(20)
                         .padding(.top, 20)
@@ -40,6 +41,7 @@ struct OnboardingRootView: View {
                         TextField("Enter your Name", text: $userName)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .white, backgroundColor: .white))
                             .foregroundColor(.black)
+                            .cornerRadius(20)
                             .padding()
 
                         Button(action: {
@@ -59,7 +61,9 @@ struct OnboardingRootView: View {
                 }
                 
                 .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .bottom)
-            }        }.ignoresSafeArea()
+            }
+            
+        }.ignoresSafeArea()
     }
 }
 
