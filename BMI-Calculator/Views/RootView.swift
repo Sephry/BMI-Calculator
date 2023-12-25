@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RootView: View {
-    @State var showOnboarding: Bool = UserDefaults.standard.bool(forKey: "isFirstTimeLaunch")
+//    @State var showOnboarding: Bool = UserDefaults.standard.bool(forKey: "isFirstTimeLaunch")
+    @State var showOnboarding: Bool = false
     @AppStorage("username") var userName: String = ""
     
     

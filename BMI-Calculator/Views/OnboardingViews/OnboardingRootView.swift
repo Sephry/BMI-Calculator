@@ -39,8 +39,8 @@ struct OnboardingRootView: View {
                             .padding()
 
                         TextField("Enter your Name", text: $userName)
-                            .textFieldStyle(CustomTextFieldStyle(borderColor: .white, backgroundColor: .white))
-                            .foregroundColor(.black)
+                            .textFieldStyle(CustomTextFieldStyle(borderColor: Color.SecondaryColor, backgroundColor: Color.PrimaryColor))
+                            .foregroundColor(Color.TextColor)
                             .cornerRadius(20)
                             .padding()
 
@@ -51,8 +51,8 @@ struct OnboardingRootView: View {
                             Spacer()
                             Text("Next")
                                 .padding()
-                                .background(Color.text)
-                                .foregroundColor(.text)
+                                .background(Color.PrimaryColor)
+                                .foregroundColor(Color.TextColor)
                         }
                         .cornerRadius(10)
                         .padding(.top, 20)

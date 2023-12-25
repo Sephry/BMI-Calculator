@@ -15,11 +15,11 @@ struct EnterBMIView: View {
     @State private var height: Double = 0
     @State private var weight: Double = 0
     @State private var kgOrLbs: String = "KG"
-    @State private var age = 0
+    @State private var age: Int = 0
     @State private var gender = true
-    @State private var result = 0
-    let options = ["KG","LBS"]
+    @State private var result: Double = 0.0
     
+    let options = ["KG","LBS"]
     let userName: String
     
     var body: some View {
@@ -45,7 +45,7 @@ struct EnterBMIView: View {
                         .padding(.horizontal)
                         .padding(.top)
                     }
-                    Text("Hi ...\(userName)")
+                    Text("Hi... \(userName)")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.TextColor)
                         .font(.largeTitle)
@@ -88,25 +88,25 @@ struct EnterBMIView: View {
                     HStack {
                         Text("Age")
                             .padding()
-                        TextField("Yaş", value: $age, format: .number)
+                        TextField("Age", value: $age, format: .number)
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
                             .foregroundColor(Color.TextColor)
                             .padding()
                     }
                     HStack {
-                        Text("Boy")
+                        Text("Height")
                             .padding()
-                        TextField("Boy", value: $height, format: .number)
+                        TextField("Height", value: $height, format: .number)
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
                             .foregroundColor(Color.TextColor)
                             .padding()
                     }
                     HStack {
-                        Text("Kilo")
+                        Text("Weight")
                             .padding()
-                        TextField("Kilo", value: $weight, format: .number)
+                        TextField("Wight", value: $weight, format: .number)
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
                             .foregroundColor(Color.TextColor)
@@ -133,15 +133,13 @@ struct EnterBMIView: View {
                     
                     HStack {
                         Spacer()
-                        Button("Submit") {
-                            DataController().addBmi(age: 22, weight: 75, height: 175, gender: true, context: managedObjContext)
-                            dismiss()
-                        }
-                        .foregroundColor(Color.TextColor)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.PrimaryColor)
-                        .cornerRadius(10)
+                        Button("Submit", action: AddBmi)
+                            .disabled(isAddButtonDisabled)
+                            .foregroundColor(Color.TextColor)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.PrimaryColor)
+                            .cornerRadius(10)
                         Spacer()
                     }
                 }
@@ -150,6 +148,18 @@ struct EnterBMIView: View {
                     
             }
         }
+    }
+    
+    var  isAddButtonDisabled: Bool {
+        return height == .zero || weight == .zero || age == .zero
+    }
+    
+    func AddBmi() {
+        let resultBmi = weight / ((height / 10) * (height / 10))
+        print(resultBmi)
+        result = resultBmi
+        DataController().addBmi(bmiResult: resultBmi, gender: gender, context: managedObjContext)
+        dismiss()
     }
 }
 

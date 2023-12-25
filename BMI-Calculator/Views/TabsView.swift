@@ -17,7 +17,6 @@ struct TabsView: View {
                 TabView(selection:$selectedTab){
                     BMIView(currentTab: $selectedTab)
                         .tag(0)
-                        .background(.red)
                     
                     TargetView(currentTab: $selectedTab)
                         .tag(1)
@@ -46,11 +45,11 @@ struct TabsView: View {
                                             .scaledToFit()
                                             .frame(height:60)
                                             .background{
-                                                Circle().style(withStroke: .white, lineWidth: 8, fill: Color.black)
+                                                Circle().style(withStroke: .white, lineWidth: 8, fill: Color.AccentColor)
                                             }
                                     }
 //                                    .foregroundColor(selectedTab == item.rawValue ? .red : .gray)
-                                    .foregroundColor(.teal)
+                                    .foregroundColor(Color.PrimaryColor)
                                     .offset(y: -30)
                                     .frame(maxWidth: .infinity)
                                     
@@ -65,7 +64,7 @@ struct TabsView: View {
                                         Text(item.iconText)
                                     }
 //                                    .foregroundColor(selectedTab == item.rawValue ? .black : .gray)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color.TextColor)
                                     .frame(maxWidth:.infinity)
                                     
                                 }
@@ -79,7 +78,7 @@ struct TabsView: View {
                 }
                 .padding(.top,5)
                 .background(
-                    LinearGradient(gradient: Gradient(colors: [.green, .teal]), startPoint: .top, endPoint: .bottom)
+                    LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
                 )
             }
         }

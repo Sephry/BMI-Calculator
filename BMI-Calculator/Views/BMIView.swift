@@ -6,24 +6,32 @@
 //
 
 import SwiftUI
-
-enum ToggleOption: String {
-    case option1 = "Erkek"
-    case option2 = "Kadın"
-}
+import CoreData
 
 struct BMIView: View {
     @Binding var currentTab: Int
+    
+    @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var bmiData: FetchedResults<Bmi>
+
+    @State private var result: Double = 0.0
+    
+    
 
     var body: some View {
         VStack{
-            
-            
+            List {
+                ForEach(bmiData) { bmiData in
+                    NavigationLink (destination: Text("\(bmiData.bmiResult)")){
+                        HStack{
+                            VStack{
+                                Text("\(bmiData.bmiResult)")
+                            }
+                        }
+                    }
+                }
+            }
      
         }
     }
-}
-
-#Preview {
-    BMIView(currentTab: .constant(1))
 }
