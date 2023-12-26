@@ -29,7 +29,7 @@ class DataController : ObservableObject {
         }
     }
     
-    func addBmi(bmiResult: Double, gender: Bool, context: NSManagedObjectContext) {
+    func addBmi(bmiResult: Double, gender: Bool, context: NSManagedObjectContext ) {
         let bmi = Bmi(context: context)
         bmi.id = UUID()
         bmi.date = Date()
