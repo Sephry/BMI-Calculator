@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD26D08C2B3B19A500040A2A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BD26D08B2B3B19A500040A2A /* SwiftUICharts */; };
 		BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD569C712B3831900091847D /* BmiModel.xcdatamodeld */; };
 		BD569C752B3831A20091847D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD569C742B3831A20091847D /* DataController.swift */; };
 		BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD26D08C2B3B19A500040A2A /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +175,9 @@
 			dependencies = (
 			);
 			name = "BMI-Calculator";
+			packageProductDependencies = (
+				BD26D08B2B3B19A500040A2A /* SwiftUICharts */,
+			);
 			productName = "BMI-Calculator";
 			productReference = BD79A0F02B33840600E4BE31 /* BMI-Calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +206,9 @@
 				Base,
 			);
 			mainGroup = BD79A0E72B33840600E4BE31;
+			packageReferences = (
+				BD26D08A2B3B19A500040A2A /* XCRemoteSwiftPackageReference "chartview" */,
+			);
 			productRefGroup = BD79A0F12B33840600E4BE31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -448,6 +456,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD26D08A2B3B19A500040A2A /* XCRemoteSwiftPackageReference "chartview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apppear/chartview.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD26D08B2B3B19A500040A2A /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD26D08A2B3B19A500040A2A /* XCRemoteSwiftPackageReference "chartview" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BD569C712B3831900091847D /* BmiModel.xcdatamodeld */ = {

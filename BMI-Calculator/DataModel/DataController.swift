@@ -29,24 +29,32 @@ class DataController : ObservableObject {
         }
     }
     
-    func addBmi(bmiResult: Double, gender: Bool, context: NSManagedObjectContext ) {
+    func addBmi(gender: Bool, weight: Double, height: Double, age: Int16, context: NSManagedObjectContext) {
         let bmi = Bmi(context: context)
         bmi.id = UUID()
         bmi.date = Date()
         bmi.gender = gender
-        bmi.bmiResult = bmiResult
+        bmi.weight = weight
+        bmi.height = height
+        bmi.age = age
+        
+        let resultBmi = weight / ((height / 10) * (height / 10))
+        bmi.bmiResult = resultBmi
         
         save(context: context)
     }
     
-    func editBmi(bmi: Bmi, bmiResult: Double, gender: Bool, context: NSManagedObjectContext) {
+    func editBmi(bmi: Bmi, gender: Bool, weight: Double, height: Double, age: Int16, context: NSManagedObjectContext) {
         bmi.date = Date()
         bmi.gender = gender
-        bmi.bmiResult = bmiResult
+        bmi.weight = weight
+        bmi.height = height
+        bmi.age = age
+        
+        let resultBmi = weight / ((height / 10) * (height / 10))
+        bmi.bmiResult = resultBmi
         
         save(context: context)
     }
-    
-    
     
 }
