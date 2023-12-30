@@ -30,38 +30,32 @@ struct BMIView: View {
             .padding()
         } else {
             NavigationStack{
-                        List {
-                            ForEach(bmiData) { bmiData in
-                                NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
-                                    get: { selectedBmi == bmiData },
-                                    set: { _ in selectedBmi = nil }
-                                )) {
-                                    HStack {
-                                        VStack {
-                                            Text("\(bmiData.bmiResult.removeTrailingZeros())")
-                                        }
-                                    }
+                List {
+                    ForEach(bmiData) { bmiData in
+                        NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
+                            get: { selectedBmi == bmiData },
+                            set: { _ in selectedBmi = nil }
+                        )) {
+                            HStack {
+                                VStack {
+                                    Text("\(bmiData.bmiResult.removeTrailingZeros())")
                                 }
-                            }.onTapGesture {
-                                isSheetPresented = true
-                            }
-                            
-                        }
-                        .sheet(isPresented: $isSheetPresented) {
-                            if let selectedBmi = selectedBmi {
-                                SheetView(bmiData: selectedBmi)
-                                    .interactiveDismissDisabled()
                             }
                         }
+                   }
+
+                    
+                }
+
             }
         }
     }
 }
-        
-    
 
-        
-//        #Preview {
-//            BMIView(currentTab: .constant(1))
-//        }
+
+
+
+#Preview {
+    BMIView(currentTab: .constant(1))
+}
 //    }

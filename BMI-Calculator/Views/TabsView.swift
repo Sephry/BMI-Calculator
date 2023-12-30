@@ -50,7 +50,6 @@ struct TabsView: View {
                                     }
 //                                    .foregroundColor(selectedTab == item.rawValue ? .red : .gray)
                                     .foregroundColor(Color.PrimaryColor)
-                                    .offset(y: -30)
                                     .frame(maxWidth: .infinity)
                                     
                                 }
@@ -69,6 +68,7 @@ struct TabsView: View {
                                     
                                 }
                             }
+                            .offset(y: item == .enterBmi ? -30 : 0)
                         }
                     }
                     

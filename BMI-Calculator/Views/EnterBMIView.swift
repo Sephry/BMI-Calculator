@@ -84,7 +84,7 @@ struct EnterBMIView: View {
                     }
                     .padding(.top)
                     
-                    Toggle("Male", isOn: $gender)
+                    GenderSelectionView(isSelectedGenderMan: $gender)
                     
                 }
                 

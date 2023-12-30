@@ -26,6 +26,7 @@
 		BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB82B339153006D27AE /* TabsView.swift */; };
 		DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */; };
 		DBA863F42B3B17CC00C74582 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA863F32B3B17CC00C74582 /* SheetView.swift */; };
+		DBC80A252B405EBF00C621CF /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */; };
 		DBE9DC962B34E88000850693 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9DC952B34E88000850693 /* CustomTextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		BDE7BEB82B339153006D27AE /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		DBA863F32B3B17CC00C74582 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
 		DBE9DC952B34E88000850693 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 			children = (
 				BD569C702B38316B0091847D /* DataModel */,
 				BDC1F2CF2B34CBD9004DCA70 /* Helpers */,
+				DBC80A232B405EAB00C621CF /* SubViews */,
 				BDE7BEA72B3385B0006D27AE /* Model */,
 				BDE7BEAA2B3385D6006D27AE /* Views */,
 				BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */,
@@ -168,6 +171,14 @@
 				DBA863F32B3B17CC00C74582 /* SheetView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DBC80A232B405EAB00C621CF /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 				BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */,
 				BDC1F2CE2B34C8AC004DCA70 /* TabbedItems.swift in Sources */,
 				BD818F842B3F9E9A001766D4 /* Double.swift in Sources */,
+				DBC80A252B405EBF00C621CF /* GenderSelectionView.swift in Sources */,
 				BDC1F2C92B34AA5B004DCA70 /* OnboardingRootView.swift in Sources */,
 				BDE7BEAC2B338A82006D27AE /* BMIView.swift in Sources */,
 				BDE7BEAE2B338CF5006D27AE /* ProfileView.swift in Sources */,
