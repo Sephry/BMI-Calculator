@@ -14,14 +14,16 @@ struct EnterBMIView: View {
     
     @State private var height: Double = 0
     @State private var weight: Double = 0
-    @State private var kgOrLbs: String = "KG"
+    @State private var kgOrLbs: String = "Kg"
+    @State private var cmOrmetre: String = "Cm"
     @State private var age: Int16 = 0
     @State private var gender = true
     
     @State private var showAlert = false
     @State private var alertMessage = ""
 
-    let options = ["KG","LBS"]
+    let optionsWeight = ["Kg","Lbs"]
+    let optionsHeight = ["Cm", "Metre"]
     let userName: String
     
     var body: some View {
@@ -103,7 +105,24 @@ struct EnterBMIView: View {
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
                             .foregroundColor(Color.TextColor)
-                            .padding()
+                            .padding(.leading)
+                        
+                        Menu {
+                            Picker(selection: $cmOrmetre) {
+                                ForEach(optionsHeight, id:\.self) { value in
+                                    Text(value)
+                                        .tag(value)
+                                }
+                            } label: {}
+                        } label: {
+                            
+                            HStack {
+                                Text(cmOrmetre)
+                                Image(systemName: "chevron.up.chevron.down")
+                            }
+                            .foregroundColor(Color.TextColor)
+                            .frame(width: 70)
+                        }
                     }
                     HStack {
                         Text("Weight")
@@ -116,7 +135,7 @@ struct EnterBMIView: View {
                         
                         Menu {
                             Picker(selection: $kgOrLbs) {
-                                ForEach(options, id:\.self) { value in
+                                ForEach(optionsWeight, id:\.self) { value in
                                     Text(value)
                                         .tag(value)
                                 }
@@ -173,7 +192,9 @@ struct EnterBMIView: View {
     }
     
     func AddBmi() {
-        DataController().addBmi(gender: gender, weight: weight, height: height, age: age, context: managedObjContext)
+        let kgOrlbs = kgOrLbs == "KG" ? true : false
+        let cmOrMetre = cmOrmetre == "Cm" ? true : false
+        DataController().addBmi(gender: gender, weight: weight, height: height, age: age, cmOrMetre: cmOrMetre, kgOrlbs: kgOrlbs, context: managedObjContext)
         dismiss()
     }
 }

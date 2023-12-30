@@ -29,12 +29,14 @@ class DataController : ObservableObject {
         }
     }
     
-    func addBmi(gender: Bool, weight: Double, height: Double, age: Int16, context: NSManagedObjectContext) {
+    func addBmi(gender: Bool, weight: Double, height: Double, age: Int16, cmOrMetre: Bool, kgOrlbs: Bool, context: NSManagedObjectContext) {
         let bmi = Bmi(context: context)
         bmi.id = UUID()
         bmi.date = Date()
         bmi.gender = gender
         bmi.age = age
+        bmi.cmOrMetre = cmOrMetre
+        bmi.kgOrlbs = kgOrlbs
         
         let formattedWeight = Double(String(format: "%.2f", weight)) ?? 0.0
         bmi.weight = formattedWeight
@@ -48,10 +50,12 @@ class DataController : ObservableObject {
         save(context: context)
     }
     
-    func editBmi(bmi: Bmi, gender: Bool, weight: Double, height: Double, age: Int16, context: NSManagedObjectContext) {
+    func editBmi(bmi: Bmi, gender: Bool, weight: Double, height: Double, age: Int16, cmOrMetre: Bool, kgOrlbs: Bool, context: NSManagedObjectContext) {
         bmi.date = Date()
         bmi.gender = gender
         bmi.age = age
+        bmi.cmOrMetre = cmOrMetre
+        bmi.kgOrlbs = kgOrlbs
         
         let formattedWeight = Double(String(format: "%.2f", weight)) ?? 0.0
         bmi.weight = formattedWeight
