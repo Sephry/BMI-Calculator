@@ -18,6 +18,9 @@ struct EnterBMIView: View {
     @State private var age: Int16 = 0
     @State private var gender = true
     
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+
     let options = ["KG","LBS"]
     let userName: String
     
@@ -132,13 +135,20 @@ struct EnterBMIView: View {
                     
                     HStack {
                         Spacer()
-                        Button("Submit", action: AddBmi)
-                            .disabled(isAddButtonDisabled)
+                        Button("Submit", action: validateFields)
+//                            .disabled(isAddButtonDisabled)
                             .foregroundColor(Color.TextColor)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.PrimaryColor)
                             .cornerRadius(10)
+                            .alert(isPresented: $showAlert) {
+                                Alert(
+                                    title: Text("Uyarı"),
+                                    message: Text(alertMessage),
+                                    dismissButton: .default(Text("Tamam"))
+                                )
+                            }
                         Spacer()
                     }
                 }
@@ -146,6 +156,15 @@ struct EnterBMIView: View {
                 .background(Color.BackgroundColor)
                     
             }
+        }
+    }
+    
+    func validateFields() {
+        if isAddButtonDisabled {
+            alertMessage = "Lütfen tüm alanları doldurun."
+            showAlert = true
+        } else {
+            AddBmi()
         }
     }
     
