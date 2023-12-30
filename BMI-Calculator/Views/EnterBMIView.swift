@@ -23,7 +23,7 @@ struct EnterBMIView: View {
     @State private var alertMessage = ""
 
     let optionsWeight = ["Kg","Lbs"]
-    let optionsHeight = ["Cm", "Metre"]
+    let optionsHeight = ["Cm", "Inches"]
     let userName: String
     
     var body: some View {
@@ -194,7 +194,7 @@ struct EnterBMIView: View {
     func AddBmi() {
         let kgOrlbs = kgOrLbs == "KG" ? true : false
         let cmOrMetre = cmOrmetre == "Cm" ? true : false
-        DataController().addBmi(gender: gender, weight: weight, height: height, age: age, cmOrMetre: cmOrMetre, kgOrlbs: kgOrlbs, context: managedObjContext)
+        DataController().addBmi(gender: gender, weight: weight, height: height, age: age, cmOrInches: cmOrMetre, kgOrlbs: kgOrlbs, context: managedObjContext)
         dismiss()
     }
 }
