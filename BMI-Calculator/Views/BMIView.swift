@@ -19,11 +19,17 @@ struct BMIView: View {
     @State var selectedBmi: Bmi? = nil
     
     var body: some View {
-      
         
+        if bmiData.isEmpty {
+            VStack {
+                Text("No BMI information found.")
+                    .foregroundColor(Color.TextColor)
+                Text("Please enter BMI.")
+                    .foregroundColor(Color.TextColor)
+            }
+            .padding()
+        } else {
             NavigationStack{
-      
-               
                         List {
                             ForEach(bmiData) { bmiData in
                                 NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
@@ -32,7 +38,7 @@ struct BMIView: View {
                                 )) {
                                     HStack {
                                         VStack {
-                                            Text("\(bmiData.bmiResult)")
+                                            Text("\(bmiData.bmiResult.removeTrailingZeros())")
                                         }
                                     }
                                 }
@@ -46,13 +52,11 @@ struct BMIView: View {
                                 SheetView(bmiData: selectedBmi)
                                     .interactiveDismissDisabled()
                             }
-                }
-                        
-                        
-                    }
-               
+                        }
             }
+        }
     }
+}
         
     
 

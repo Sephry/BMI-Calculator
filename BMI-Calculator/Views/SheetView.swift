@@ -18,20 +18,19 @@ struct SheetView: View {
             
             VStack {
                 if let bmiData = bmiData {
-                    Text("KG:")
-                    Text("Boy:")
-                    Text("BMI Sonucu: \(bmiData.bmiResult)")
+                    Text("Age: \(bmiData.age)")
+                    Text("KG: \(bmiData.weight)")
+                    Text("Boy: \(bmiData.height)")
+                    Text("BMI Sonucu: \(bmiData.bmiResult.removeTrailingZeros())")
                 } else {
                     Text("Hata: BMI verisi eksik")
                 }
-                
-               
             }
             .padding()
-        }.ignoresSafeArea(.all)
-        
+        }
+        .ignoresSafeArea(.all)
     }
-    }
+}
 
 
 #Preview {

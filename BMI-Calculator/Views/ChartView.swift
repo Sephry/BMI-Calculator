@@ -11,15 +11,28 @@ import SwiftUICharts
 struct ChartView: View {
     @Binding var currentTab: Int
     
+    @FetchRequest(entity: Bmi.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Bmi.date, ascending: true)]) var bmiData: FetchedResults<Bmi>
+    
     var body: some View {
-        VStack {
-            BarChartView(data: ChartData(values: [("2018 Q4",63150), ("2019 Q1",50900), ("2019 Q2",77550), ("2019 Q3",79600), ("2019 Q4",92550)]), title: "Sales", legend: "Quarterly") // legend is optional
-
+        if bmiData.isEmpty {
+            VStack {
+                Text("No BMI information found.")
+                    .foregroundColor(Color.TextColor)
+                Text("Please enter BMI.")
+                    .foregroundColor(Color.TextColor)
+            }
+            .padding()
+        } else {
+            VStack {
+                LineView(data: bmiData.map { Double($0.weight) }, title: "Weight Data", legend: "Weight Graph")
+                                    .padding()
+                BarChartView(data: ChartData(points: bmiData.map { Double($0.bmiResult) }), title: "BMI Data", legend: "BMI Graph")
+                    .padding()
+            }
         }
-        
     }
 }
 
-#Preview {
-    ChartView(currentTab: .constant(1))
-}
+//#Preview {
+//    ChartView(currentTab: .constant(1))
+//}

@@ -17,7 +17,6 @@ struct EnterBMIView: View {
     @State private var kgOrLbs: String = "KG"
     @State private var age: Int16 = 0
     @State private var gender = true
-    @State private var result: Double = 0.0
     
     let options = ["KG","LBS"]
     let userName: String
@@ -155,9 +154,6 @@ struct EnterBMIView: View {
     }
     
     func AddBmi() {
-        let resultBmi = weight / ((height / 10) * (height / 10))
-        print(resultBmi)
-        result = resultBmi
         DataController().addBmi(gender: gender, weight: weight, height: height, age: age, context: managedObjContext)
         dismiss()
     }

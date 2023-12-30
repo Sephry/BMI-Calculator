@@ -38,8 +38,9 @@ class DataController : ObservableObject {
         bmi.height = height
         bmi.age = age
         
-        let resultBmi = weight / ((height / 10) * (height / 10))
-        bmi.bmiResult = resultBmi
+        let resultBmi = (weight / ((height / 10) * (height / 10))) * 100
+        let formattedDouble = Double(String(format: "%.2f", resultBmi)) ?? 0.0
+        bmi.bmiResult = formattedDouble
         
         save(context: context)
     }
@@ -51,8 +52,9 @@ class DataController : ObservableObject {
         bmi.height = height
         bmi.age = age
         
-        let resultBmi = weight / ((height / 10) * (height / 10))
-        bmi.bmiResult = resultBmi
+        let resultBmi = (weight / ((height / 10) * (height / 10))) * 100
+        let formattedDouble = Double(String(format: "%.2f", resultBmi)) ?? 0.0
+        bmi.bmiResult = formattedDouble
         
         save(context: context)
     }
