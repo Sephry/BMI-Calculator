@@ -3,7 +3,10 @@ import SwiftUI
 struct OnboardingRootView: View {
 
     @Binding var userName: String
-
+    @Binding var showOnboarding: Bool
+    
+    let notify = NotificationViewModel()
+    
     var body: some View {
         
         ZStack {
@@ -45,8 +48,9 @@ struct OnboardingRootView: View {
                             .padding()
 
                         Button(action: {
-                            print("Button tapped!")
-                            
+                            notify.requestNotificationAccess()
+                            UserDefaults.standard.set(false, forKey: "isFirstTimeLaunch")
+                            showOnboarding = false
                         }) {
                             Spacer()
                             Text("Next")
@@ -68,8 +72,8 @@ struct OnboardingRootView: View {
     }
 }
 
-struct OnboardingRootView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingRootView(userName: .constant("ismail"))
-    }
-}
+//struct OnboardingRootView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnboardingRootView(userName: .constant("ismail"))
+//    }
+//}

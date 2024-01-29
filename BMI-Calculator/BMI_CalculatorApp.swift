@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct BMI_CalculatorApp: App {
     
+    @AppStorage("isDarkModeEnabled") var isDarkModeEnabled: Bool = false
     @StateObject private var dataController = DataController()
     var defaults = UserDefaults.standard
 
@@ -24,7 +25,7 @@ struct BMI_CalculatorApp: App {
         WindowGroup {
             RootView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
-                .preferredColorScheme(.light)
+                .preferredColorScheme(isDarkModeEnabled ? .dark : .light)
         }
     }
 }

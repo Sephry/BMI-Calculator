@@ -10,7 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     @Binding var currentTab: Int
 
-    @State var isDarkModeEnabled: Bool = true
+    @AppStorage("isDarkModeEnabled") var isDarkModeEnabled: Bool = false
+
     @State var downloadViaWifiEnabled: Bool = false
     
     var body: some View {

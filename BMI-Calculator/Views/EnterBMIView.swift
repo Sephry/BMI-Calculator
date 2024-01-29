@@ -23,7 +23,7 @@ struct EnterBMIView: View {
     @State private var alertMessage = ""
 
     let optionsWeight = ["Kg","Lbs"]
-    let optionsHeight = ["Cm", "Inches"]
+    let optionsHeight = ["Cm", "Inc"]
     let userName: String
     
     var body: some View {
@@ -71,7 +71,10 @@ struct EnterBMIView: View {
                             .frame(height: 120)
                             .padding(20)
                             .background{
-                                Circle().fill(Color.PrimaryColor)
+                                Circle().fill(gender ? Color.PrimaryColor : Color.PrimaryColor.opacity(0.35))
+                            }
+                            .onTapGesture {
+                                gender = true
                             }
                         Image("woman")
                             .resizable()
@@ -79,7 +82,10 @@ struct EnterBMIView: View {
                             .frame(height: 120)
                             .padding(20)
                             .background{
-                                Circle().fill(Color.PrimaryColor)
+                                Circle().fill(!gender ? Color.PrimaryColor : Color.PrimaryColor.opacity(0.35))
+                            }
+                            .onTapGesture {
+                                gender = false
                             }
                     }
                     .padding(.top)
@@ -131,7 +137,11 @@ struct EnterBMIView: View {
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
                             .foregroundColor(Color.TextColor)
+                            .background{
+                                RoundedRectangle(cornerRadius: 8)
+                            }
                             .padding(.leading)
+                         
                         
                         Menu {
                             Picker(selection: $kgOrLbs) {
@@ -192,7 +202,7 @@ struct EnterBMIView: View {
     }
     
     func AddBmi() {
-        let kgOrlbs = kgOrLbs == "KG" ? true : false
+        let kgOrlbs = kgOrLbs == "Kg" ? true : false
         let cmOrMetre = cmOrmetre == "Cm" ? true : false
         DataController().addBmi(gender: gender, weight: weight, height: height, age: age, cmOrInches: cmOrMetre, kgOrlbs: kgOrlbs, context: managedObjContext)
         dismiss()

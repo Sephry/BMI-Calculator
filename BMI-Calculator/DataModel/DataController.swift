@@ -51,9 +51,6 @@ class DataController : ObservableObject {
             convertedWeight = weight * 0.453592 // Bir pound 0.453592 kilogram
         }
         
-        bmi.weight = convertedWeight
-        bmi.height = convertedHeight
-        
         let formattedWeight = Double(String(format: "%.2f", convertedWeight)) ?? 0.0
         bmi.weight = formattedWeight
         let formattedHeight = Double(String(format: "%.2f", convertedHeight)) ?? 0.0

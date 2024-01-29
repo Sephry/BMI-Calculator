@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BD26D08C2B3B19A500040A2A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BD26D08B2B3B19A500040A2A /* SwiftUICharts */; };
+		BD3A69072B63FD3700096725 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A69062B63FD3700096725 /* NotificationManager.swift */; };
+		BD3A69092B63FFBA00096725 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A69082B63FFBA00096725 /* DateExtensions.swift */; };
 		BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD569C712B3831900091847D /* BmiModel.xcdatamodeld */; };
 		BD569C752B3831A20091847D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD569C742B3831A20091847D /* DataController.swift */; };
 		BD79A0F42B33840600E4BE31 /* BMI_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD3A69062B63FD3700096725 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		BD3A69082B63FFBA00096725 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		BD569C722B3831900091847D /* BmiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BmiModel.xcdatamodel; sourceTree = "<group>"; };
 		BD569C742B3831A20091847D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BD79A0F02B33840600E4BE31 /* BMI-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD3A69052B63FCB300096725 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A69062B63FD3700096725 /* NotificationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BD569C702B38316B0091847D /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +106,9 @@
 		BD79A0F22B33840600E4BE31 /* BMI-Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				BD3A69052B63FCB300096725 /* Services */,
 				BD569C702B38316B0091847D /* DataModel */,
 				BDC1F2CF2B34CBD9004DCA70 /* Helpers */,
-				DBC80A232B405EAB00C621CF /* SubViews */,
 				BDE7BEA72B3385B0006D27AE /* Model */,
 				BDE7BEAA2B3385D6006D27AE /* Views */,
 				BD79A0F32B33840600E4BE31 /* BMI_CalculatorApp.swift */,
@@ -144,6 +156,7 @@
 				DBE9DC952B34E88000850693 /* CustomTextFieldStyle.swift */,
 				DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */,
 				BD818F832B3F9E9A001766D4 /* Double.swift */,
+				BD3A69082B63FFBA00096725 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +172,7 @@
 		BDE7BEAA2B3385D6006D27AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBC80A232B405EAB00C621CF /* SubViews */,
 				BD818F852B3FA1FC001766D4 /* Components */,
 				BDC1F2C72B34AA03004DCA70 /* OnboardingViews */,
 				BDC1F2C52B34A91E004DCA70 /* RootView.swift */,
@@ -258,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC1F2D22B34CBEA004DCA70 /* ShapeExtensions.swift in Sources */,
+				BD3A69092B63FFBA00096725 /* DateExtensions.swift in Sources */,
 				BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */,
 				BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */,
 				BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */,
@@ -272,6 +287,7 @@
 				BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */,
 				DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */,
 				BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */,
+				BD3A69072B63FD3700096725 /* NotificationManager.swift in Sources */,
 				DBE9DC962B34E88000850693 /* CustomTextFieldStyle.swift in Sources */,
 				DBA863F42B3B17CC00C74582 /* SheetView.swift in Sources */,
 				BDC1F2C62B34A91E004DCA70 /* RootView.swift in Sources */,
@@ -333,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -390,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -416,6 +432,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

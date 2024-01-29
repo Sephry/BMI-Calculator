@@ -43,10 +43,7 @@ struct BMIView: View {
                             }
                         }
                    }
-
-                    
                 }
-
             }
         }
     }

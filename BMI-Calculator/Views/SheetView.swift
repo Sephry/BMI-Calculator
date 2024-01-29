@@ -11,6 +11,7 @@ import SwiftUI
 
 struct SheetView: View {
     var bmiData: Bmi?
+    
     var body: some View {
         ZStack{
            
@@ -19,9 +20,9 @@ struct SheetView: View {
             VStack {
                 if let bmiData = bmiData {
                     Text("Age: \(bmiData.age)")
-                    Text("KG: \(bmiData.weight.removeTrailingZeros())")
-                    Text("Boy: \(bmiData.height.removeTrailingZeros())")
-                    Text("BMI Sonucu: \(bmiData.bmiResult.removeTrailingZeros())")
+                    Text("Weight (\(bmiData.kgOrlbs ? "Kg" : "lb")): \(bmiData.weight.removeTrailingZeros())")
+                    Text("Height (\(bmiData.cmOrMetre ? "Cm" : "Inches")): \(bmiData.height.removeTrailingZeros())")
+                    Text("BMI Result: \(bmiData.bmiResult.removeTrailingZeros())")
                 } else {
                     Text("Hata: BMI verisi eksik")
                 }
