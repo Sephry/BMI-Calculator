@@ -32,23 +32,6 @@ struct EnterBMIView: View {
             
             VStack {
                 VStack{
-                    HStack {
-                        Button(action: {}) {
-                            Image(systemName: "list.bullet")
-                                .imageScale(.large)
-                                .foregroundColor(Color.TextColor)
-                        }
-                        .padding(.horizontal)
-                        .padding(.top)
-                        Spacer()
-                        Button(action: {}) {
-                            Image(systemName: "bell.fill")
-                                .imageScale(.large)
-                                .foregroundColor(Color.TextColor)
-                        }
-                        .padding(.horizontal)
-                        .padding(.top)
-                    }
                     Text("Hi... \(userName)")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.TextColor)

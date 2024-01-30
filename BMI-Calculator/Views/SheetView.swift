@@ -18,10 +18,10 @@ struct SheetView: View {
         ZStack{
             LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
             
-            VStack {
+            VStack(spacing: 40) {
                 if let bmiData = bmiData {
                     if bmiData.bmiResult > 40 {
-//                        red
+                        //                        red
                         Circle()
                             .stroke(lineWidth: 10)
                             .frame(width: 150, height: 150)
@@ -30,7 +30,7 @@ struct SheetView: View {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
                             }
                     } else if bmiData.bmiResult > 25 {
-//                        orange
+                        //                        orange
                         Circle()
                             .stroke(lineWidth: 10)
                             .frame(width: 150, height: 150)
@@ -39,7 +39,7 @@ struct SheetView: View {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
                             }
                     } else if bmiData.bmiResult > 18.5 {
-//                        green
+                        //                        green
                         Circle()
                             .stroke(lineWidth: 10)
                             .frame(width: 150, height: 150)
@@ -48,7 +48,7 @@ struct SheetView: View {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
                             }
                     } else {
-//                        yellow
+                        //                        yellow
                         Circle()
                             .stroke(lineWidth: 10)
                             .frame(width: 150, height: 150)
@@ -94,15 +94,59 @@ struct SheetView: View {
                     .frame(height: 100)
                     .padding(.horizontal, 20)
                     
+                    
                     VStack{
-                        Text("Underweight")
-                        Text("Normal")
-
-                        Text("Overweight")
-
-                        Text("Obese")
-
+                        HStack {
+                            Circle()
+                                .foregroundColor(.yellow)
+                                .frame(width: 20, height: 20)
+                            Text("Underweight")
+                                .font(.caption)
+                            Spacer()
+                            Text("≤ 18.4")
+                        }
+                        
+                        HStack {
+                            Circle()
+                                .foregroundColor(.green)
+                                .frame(width: 20, height: 20)
+                            Text("Normal")
+                                .font(.caption)
+                            Spacer()
+                            Text("18.5 - 24.9")
+                        }
+                        
+                        HStack {
+                            Circle()
+                                .foregroundColor(.orange)
+                                .frame(width: 20, height: 20)
+                            Text("Overweight")
+                                .font(.caption)
+                            Spacer()
+                            Text("25.0 - 39.9")
+                        }
+                        
+                        HStack {
+                            Circle()
+                                .foregroundColor(.red)
+                                .frame(width: 20, height: 20)
+                            Text("Obese")
+                                .font(.caption)
+                            Spacer()
+                            Text("≥ 40.0")
+                        }
+                        
                     }
+                    .padding(.horizontal, 35)
+                    .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.white)
+                                .shadow(radius: 20)
+                                .frame(width: .infinity, height: 150)
+                                .padding()
+                        )
+                    
+                    
                 } else {
                     Text("Hata: BMI verisi eksik")
                 }
@@ -111,9 +155,4 @@ struct SheetView: View {
         }
         .ignoresSafeArea(.all)
     }
-}
-
-
-#Preview {
-    SheetView()
 }
