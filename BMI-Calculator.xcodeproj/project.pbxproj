@@ -126,13 +126,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BD818F852B3FA1FC001766D4 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		BDC1F2C72B34AA03004DCA70 /* OnboardingViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				DBC80A232B405EAB00C621CF /* SubViews */,
-				BD818F852B3FA1FC001766D4 /* Components */,
 				BDC1F2C72B34AA03004DCA70 /* OnboardingViews */,
 				BDC1F2C52B34A91E004DCA70 /* RootView.swift */,
 				BDE7BEB82B339153006D27AE /* TabsView.swift */,
