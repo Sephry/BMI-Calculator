@@ -14,6 +14,8 @@ struct ProfileView: View {
 
     @State var downloadViaWifiEnabled: Bool = false
     
+    let userName: String
+    
     var body: some View {
                     Form {
                         Group {
@@ -24,28 +26,8 @@ struct ProfileView: View {
                                         .resizable()
                                         .frame(width:100, height: 100, alignment: .center)
                                         .padding()
-                                    Text("İsmail KURT")
+                                    Text(userName)
                                         .font(.title)
-                                    Text("ismail.kurt@gmail.com")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                    Spacer()
-                                    Button(action: {
-                                        print("Edit Profile tapped")
-                                    }) {
-                                        Text("Edit Profile")
-                                            .frame(minWidth: 0, maxWidth: .infinity)
-                                            .font(.system(size: 18))
-                                            .padding()
-                                            .foregroundColor(.white)
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 25)
-                                                    .stroke(Color.white, lineWidth: 2)
-                                            )
-                                    }
-                                    .background(Color.blue)
-                                    .cornerRadius(25)
-                                    .padding()
                                 }
                                 Spacer()
                             }
@@ -85,5 +67,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView(currentTab: .constant(1))
+    ProfileView(currentTab: .constant(1), userName: "ismail")
 }

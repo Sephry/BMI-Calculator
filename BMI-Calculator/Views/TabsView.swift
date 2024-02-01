@@ -18,7 +18,7 @@ struct TabsView: View {
                     BMIView(currentTab: $selectedTab, userName: userName)
                         .tag(0)
                     
-                    TargetView(currentTab: $selectedTab)
+                    TargetView(currentTab: $selectedTab, userName: userName)
                         .tag(1)
                     
                     EnterBMIView(currentTab: $selectedTab, userName: userName)
@@ -27,7 +27,7 @@ struct TabsView: View {
                     ChartView(currentTab: $selectedTab)
                         .tag(3)
                     
-                    ProfileView(currentTab: $selectedTab)
+                    ProfileView(currentTab: $selectedTab, userName: userName)
                         .tag(4)
                 }
                 

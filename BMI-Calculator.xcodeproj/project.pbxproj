@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0231E82B6BECE40005EEA3 /* TargetDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0231E72B6BECE40005EEA3 /* TargetDataController.swift */; };
 		BD26D08C2B3B19A500040A2A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BD26D08B2B3B19A500040A2A /* SwiftUICharts */; };
 		BD3A69072B63FD3700096725 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A69062B63FD3700096725 /* NotificationManager.swift */; };
 		BD3A69092B63FFBA00096725 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3A69082B63FFBA00096725 /* DateExtensions.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0231E72B6BECE40005EEA3 /* TargetDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDataController.swift; sourceTree = "<group>"; };
 		BD3A69062B63FD3700096725 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		BD3A69082B63FFBA00096725 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		BD569C722B3831900091847D /* BmiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BmiModel.xcdatamodel; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				BD569C712B3831900091847D /* BmiModel.xcdatamodeld */,
 				BD569C742B3831A20091847D /* DataController.swift */,
+				BD0231E72B6BECE40005EEA3 /* TargetDataController.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				BD569C752B3831A20091847D /* DataController.swift in Sources */,
 				BDE7BEB02B338D5A006D27AE /* TargetView.swift in Sources */,
 				DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */,
+				BD0231E82B6BECE40005EEA3 /* TargetDataController.swift in Sources */,
 				BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */,
 				BD3A69072B63FD3700096725 /* NotificationManager.swift in Sources */,
 				DBE9DC962B34E88000850693 /* CustomTextFieldStyle.swift in Sources */,
