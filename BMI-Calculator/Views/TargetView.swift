@@ -11,7 +11,12 @@ struct TargetView: View {
     @Binding var currentTab: Int
     
     var body: some View {
-        Text("target")
+        VStack {
+            Image("archery")
+                .resizable()
+                .scaledToFit()
+                .padding(20)
+        }
     }
 }
 

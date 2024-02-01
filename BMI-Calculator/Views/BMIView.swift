@@ -18,6 +18,8 @@ struct BMIView: View {
     @State var isSheetPresented:Bool = false
     @State var selectedBmi: Bmi? = nil
     
+    let userName: String
+    
     var body: some View {
         
         if bmiData.isEmpty {
@@ -44,6 +46,8 @@ struct BMIView: View {
                         }
                    }
                 }
+                .navigationTitle("Hi... \(userName)")          
+                .navigationBarTitleDisplayMode(.large)
             }
         }
     }
@@ -53,6 +57,6 @@ struct BMIView: View {
 
 
 #Preview {
-    BMIView(currentTab: .constant(1))
+    BMIView(currentTab: .constant(1), userName: "ismail")
 }
 //    }

@@ -28,8 +28,7 @@ struct EnterBMIView: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
-            
+        VStack {
             VStack {
                 VStack{
                     Text("Hi... \(userName)")
@@ -71,7 +70,6 @@ struct EnterBMIView: View {
                                 gender = false
                             }
                     }
-                    .padding(.top)
                     
                     GenderSelectionView(isSelectedGenderMan: $gender)
                     
@@ -124,7 +122,7 @@ struct EnterBMIView: View {
                                 RoundedRectangle(cornerRadius: 8)
                             }
                             .padding(.leading)
-                         
+                        
                         
                         Menu {
                             Picker(selection: $kgOrLbs) {
@@ -148,7 +146,7 @@ struct EnterBMIView: View {
                     HStack {
                         Spacer()
                         Button("Submit", action: validateFields)
-//                            .disabled(isAddButtonDisabled)
+                        //                            .disabled(isAddButtonDisabled)
                             .foregroundColor(Color.TextColor)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -166,7 +164,7 @@ struct EnterBMIView: View {
                 }
                 .listStyle(GroupedListStyle())
                 .background(Color.BackgroundColor)
-                    
+                
             }
         }
     }

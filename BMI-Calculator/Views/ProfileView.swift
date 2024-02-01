@@ -53,8 +53,10 @@ struct ProfileView: View {
                         
                         Section(header: Text("CONTENT"), content: {
                             HStack{
-                                Image(systemName: "square.and.arrow.up")
-                                Text("Share")
+                                
+                                ShareLink(item: URL(string: "https://apps.apple.com/us/app/light-speedometer/id6447198696")!) {
+                                            Label("Share", systemImage: "square.and.arrow.up")
+                                        }
                             }
 
                             HStack{

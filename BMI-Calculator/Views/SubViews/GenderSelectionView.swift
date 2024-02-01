@@ -12,30 +12,19 @@ struct GenderSelectionView: View {
     var body: some View {
         HStack(spacing:0){
             HStack{
-                
                 Text("Male")
                     .foregroundColor(isSelectedGenderMan ? .black : .black.opacity(0.35))
                     .frame(maxWidth: .infinity)
-                
             }
             .frame(height: 30)
-            
-            
             .background{
                 if isSelectedGenderMan{
                     RoundedRectangle(cornerRadius: 10).fill(Color.PrimaryColor)
                 }
-                
-                
-                
             }
-            
             .onTapGesture {
                 isSelectedGenderMan = true
-                
-                
             }
-            
             
             HStack{
                 Text("Female")
@@ -44,22 +33,15 @@ struct GenderSelectionView: View {
                 
             }
             .frame(height: 30)
-            
-            
             .background{
                 if !isSelectedGenderMan{
                     RoundedRectangle(cornerRadius: 10).fill(Color.PrimaryColor)
                 }
-                
-                
-                
             }
             .onTapGesture {
                 isSelectedGenderMan = false
                 
             }
-            
-            
             
         }
         .font(.subheadline)

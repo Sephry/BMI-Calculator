@@ -15,7 +15,7 @@ struct TabsView: View {
         ZStack(alignment:.bottom){
             VStack(spacing:0){
                 TabView(selection:$selectedTab){
-                    BMIView(currentTab: $selectedTab)
+                    BMIView(currentTab: $selectedTab, userName: userName)
                         .tag(0)
                     
                     TargetView(currentTab: $selectedTab)
