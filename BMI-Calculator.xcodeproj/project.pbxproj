@@ -27,6 +27,7 @@
 		BDE7BEB22B338DCB006D27AE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB12B338DCB006D27AE /* ChartView.swift */; };
 		BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */; };
 		BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB82B339153006D27AE /* TabsView.swift */; };
+		BDF1F7FA2B6FB6BE007A993A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1F7F92B6FB6BE007A993A /* PaywallView.swift */; };
 		DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */; };
 		DBA863F42B3B17CC00C74582 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA863F32B3B17CC00C74582 /* SheetView.swift */; };
 		DBC80A252B405EBF00C621CF /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */; };
@@ -54,6 +55,7 @@
 		BDE7BEB12B338DCB006D27AE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		BDE7BEB62B338F30006D27AE /* EnterBMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBMIView.swift; sourceTree = "<group>"; };
 		BDE7BEB82B339153006D27AE /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		BDF1F7F92B6FB6BE007A993A /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		DBA863F32B3B17CC00C74582 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				BDE7BEB12B338DCB006D27AE /* ChartView.swift */,
 				BDE7BEAD2B338CF5006D27AE /* ProfileView.swift */,
 				DBA863F32B3B17CC00C74582 /* SheetView.swift */,
+				BDF1F7F92B6FB6BE007A993A /* PaywallView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				BDE7BEB72B338F30006D27AE /* EnterBMIView.swift in Sources */,
 				BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */,
 				BD569C732B3831900091847D /* BmiModel.xcdatamodeld in Sources */,
+				BDF1F7FA2B6FB6BE007A993A /* PaywallView.swift in Sources */,
 				BDC1F2CE2B34C8AC004DCA70 /* TabbedItems.swift in Sources */,
 				BD818F842B3F9E9A001766D4 /* Double.swift in Sources */,
 				DBC80A252B405EBF00C621CF /* GenderSelectionView.swift in Sources */,

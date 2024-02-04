@@ -13,6 +13,7 @@ struct BMIView: View {
     
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var bmiData: FetchedResults<Bmi>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.weight, order: .reverse)]) var targetData: FetchedResults<TargetWeight>
     
     @State private var result: Double = 0.0
     @State var isSheetPresented:Bool = false
@@ -33,6 +34,13 @@ struct BMIView: View {
         } else {
             NavigationStack{
                 List {
+                    ForEach(targetData) { targetData in
+                        HStack {
+                            Text("Hedefinz : ")
+                            Text("\(targetData.weight.removeTrailingZeros())")
+                        }
+                    }
+                    
                     ForEach(bmiData) { bmiData in
                         NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
                             get: { selectedBmi == bmiData },
@@ -44,9 +52,9 @@ struct BMIView: View {
                                 }
                             }
                         }
-                   }
+                    }
                 }
-                .navigationTitle("Hi... \(userName)")          
+                .navigationTitle("Hi... \(userName)")
                 .navigationBarTitleDisplayMode(.large)
             }
         }

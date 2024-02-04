@@ -30,7 +30,6 @@ class TargetDataController : ObservableObject {
     
     func addTarget(weight: Double, kgOrlbs: Bool, name: String, context: NSManagedObjectContext) {
         let target = TargetWeight(context: context)
-        let bmi = Bmi(context: context)
         target.id = UUID()
         target.kgOrlbs = kgOrlbs
         target.name = name
@@ -43,7 +42,7 @@ class TargetDataController : ObservableObject {
         }
         
         let formattedWeight = Double(String(format: "%.2f", convertedWeight)) ?? 0.0
-        bmi.weight = formattedWeight
+        target.weight = formattedWeight
         
         save(context: context)
     }
