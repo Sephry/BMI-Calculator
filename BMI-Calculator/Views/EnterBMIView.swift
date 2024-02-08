@@ -40,7 +40,7 @@ struct EnterBMIView: View {
                         .padding(.all, 10)
                 }
                 .background(
-                    LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
+                    Color.PrimaryColor
                 )
             }
             

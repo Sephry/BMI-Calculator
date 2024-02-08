@@ -78,7 +78,7 @@ struct TabsView: View {
                 }
                 .padding(.top,5)
                 .background(
-                    LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
+                    Color.PrimaryColor
                 )
             }
         }

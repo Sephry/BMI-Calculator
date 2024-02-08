@@ -42,7 +42,7 @@ struct TargetView: View {
 
                 }
                 .background(
-                    LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
+                    Color.PrimaryColor
                 )
             }
             
