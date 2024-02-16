@@ -22,40 +22,45 @@ struct BMIView: View {
     let userName: String
     
     var body: some View {
-        
-        if bmiData.isEmpty {
-            VStack {
-                Text("No BMI information found.")
-                    .foregroundColor(Color.TextColor)
-                Text("Please enter BMI.")
-                    .foregroundColor(Color.TextColor)
-            }
-            .padding()
-        } else {
-            NavigationStack{
-                List {
-                    ForEach(targetData) { targetData in
-                        HStack {
-                            Text("Hedefinz : ")
-                            Text("\(targetData.weight.removeTrailingZeros())")
-                        }
+        NavigationStack {
+            VStack(alignment: .leading){
+                Text("Hi... \(userName)")
+                    .foregroundColor(Color.PrimaryColor)
+                    .font(.largeTitle)
+                    .padding(.horizontal)
+                
+                if bmiData.isEmpty {
+                    VStack {
+                        Text("No BMI information found.")
+                            .foregroundColor(Color.TextColor)
+                        Text("Please enter BMI.")
+                            .foregroundColor(Color.TextColor)
                     }
-                    
-                    ForEach(bmiData) { bmiData in
-                        NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
-                            get: { selectedBmi == bmiData },
-                            set: { _ in selectedBmi = nil }
-                        )) {
+                    .padding()
+                } else {
+                    List {
+                        ForEach(targetData) { targetData in
                             HStack {
-                                VStack {
-                                    Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                Text("Hedefinz : ")
+                                Text("\(targetData.weight.removeTrailingZeros())")
+                            }
+                        }
+                        
+                        ForEach(bmiData) { bmiData in
+                            NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
+                                get: { selectedBmi == bmiData },
+                                set: { _ in selectedBmi = nil }
+                            )) {
+                                HStack {
+                                    VStack {
+                                        Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                    }
                                 }
                             }
+                            
                         }
                     }
                 }
-                .navigationTitle("Hi... \(userName)")
-                .navigationBarTitleDisplayMode(.large)
             }
         }
     }

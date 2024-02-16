@@ -16,7 +16,7 @@ struct SheetView: View {
     
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.SecondaryColor, Color.PrimaryColor]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [Color.PrimaryColor, Color.SecondaryColor]), startPoint: .top, endPoint: .bottom)
             
             VStack(spacing: 40) {
                 if let bmiData = bmiData {
@@ -28,6 +28,7 @@ struct SheetView: View {
                             .foregroundColor(.red)
                             .overlay {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                    .foregroundColor(Color.TextColor)
                             }
                     } else if bmiData.bmiResult > 25 {
                         //                        orange
@@ -37,6 +38,7 @@ struct SheetView: View {
                             .foregroundColor(.orange)
                             .overlay {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                    .foregroundColor(Color.TextColor)
                             }
                     } else if bmiData.bmiResult > 18.5 {
                         //                        green
@@ -46,6 +48,7 @@ struct SheetView: View {
                             .foregroundColor(.green)
                             .overlay {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                    .foregroundColor(Color.TextColor)
                             }
                     } else {
                         //                        yellow
@@ -55,6 +58,8 @@ struct SheetView: View {
                             .foregroundColor(.yellow)
                             .overlay {
                                 Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                    .foregroundColor(Color.TextColor)
+                                
                             }
                     }
                     
@@ -66,8 +71,9 @@ struct SheetView: View {
                             .overlay(
                                 VStack {
                                     Text("Age")
-                                        .foregroundColor(.white)
+                                        .foregroundColor(Color.TextColor)
                                     Text("\(bmiData.age)")
+                                        .foregroundColor(Color.TextColor)
                                 }
                             )
                         RoundedRectangle(cornerRadius: 20)
@@ -76,8 +82,10 @@ struct SheetView: View {
                             .overlay(
                                 VStack {
                                     Text("Weight (\(bmiData.kgOrlbs ? "Kg" : "lb"))")
-                                        .foregroundColor(.white)
+                                        .foregroundColor(Color.TextColor)
                                     Text("\(bmiData.weight.removeTrailingZeros())")
+                                        .foregroundColor(Color.TextColor)
+                                    
                                 }
                             )
                         RoundedRectangle(cornerRadius: 20)
@@ -86,8 +94,9 @@ struct SheetView: View {
                             .overlay(
                                 VStack {
                                     Text("Height (\(bmiData.cmOrMetre ? "Cm" : "Inches"))")
-                                        .foregroundColor(.white)
+                                        .foregroundColor(Color.TextColor)
                                     Text("\(bmiData.height.removeTrailingZeros())")
+                                        .foregroundColor(Color.TextColor)
                                 }
                             )
                     }
@@ -101,7 +110,6 @@ struct SheetView: View {
                                 .foregroundColor(.yellow)
                                 .frame(width: 20, height: 20)
                             Text("Underweight")
-                                .font(.caption)
                             Spacer()
                             Text("≤ 18.4")
                         }
@@ -111,7 +119,6 @@ struct SheetView: View {
                                 .foregroundColor(.green)
                                 .frame(width: 20, height: 20)
                             Text("Normal")
-                                .font(.caption)
                             Spacer()
                             Text("18.5 - 24.9")
                         }
@@ -121,7 +128,6 @@ struct SheetView: View {
                                 .foregroundColor(.orange)
                                 .frame(width: 20, height: 20)
                             Text("Overweight")
-                                .font(.caption)
                             Spacer()
                             Text("25.0 - 39.9")
                         }
@@ -131,7 +137,6 @@ struct SheetView: View {
                                 .foregroundColor(.red)
                                 .frame(width: 20, height: 20)
                             Text("Obese")
-                                .font(.caption)
                             Spacer()
                             Text("≥ 40.0")
                         }
@@ -139,12 +144,12 @@ struct SheetView: View {
                     }
                     .padding(.horizontal, 35)
                     .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
-                                .shadow(radius: 20)
-                                .frame(width: .infinity, height: 150)
-                                .padding()
-                        )
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.BackgroundColor)
+                            .shadow(radius: 20)
+                            .frame(width: .infinity, height: 150)
+                            .padding()
+                    )
                     
                     
                 } else {
