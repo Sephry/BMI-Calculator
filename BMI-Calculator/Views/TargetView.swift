@@ -38,7 +38,7 @@ struct TargetView: View {
                     
                     if targetData.isEmpty
                     {
-                        Text("Hedefini Girmek İster Misin ?")
+                        Text("What is your BMI goal?")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.subheadline)
                             .padding(.leading, 40)
