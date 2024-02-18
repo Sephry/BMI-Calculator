@@ -29,6 +29,7 @@
 		BDE7BEB92B339153006D27AE /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7BEB82B339153006D27AE /* TabsView.swift */; };
 		BDF1F7FA2B6FB6BE007A993A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1F7F92B6FB6BE007A993A /* PaywallView.swift */; };
 		DB3DE0D42B3A0ECA004B716B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */; };
+		DB3F74672B81163700932579 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB3F74692B81163700932579 /* Localizable.strings */; };
 		DBA863F42B3B17CC00C74582 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA863F32B3B17CC00C74582 /* SheetView.swift */; };
 		DBBA64D02B7FB5EF00BDE188 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA64CF2B7FB5EF00BDE188 /* PrivacyPolicyView.swift */; };
 		DBC80A252B405EBF00C621CF /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */; };
@@ -58,6 +59,8 @@
 		BDE7BEB82B339153006D27AE /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		BDF1F7F92B6FB6BE007A993A /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		DB3DE0D32B3A0ECA004B716B /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		DB3F746A2B81163900932579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB3F746B2B81166E00932579 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DBA863F32B3B17CC00C74582 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		DBBA64CF2B7FB5EF00BDE188 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		DBC80A242B405EBF00C621CF /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		BD79A0F22B33840600E4BE31 /* BMI-Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				DB3F74642B8115A600932579 /* Resources */,
 				BD3A69052B63FCB300096725 /* Services */,
 				BD569C702B38316B0091847D /* DataModel */,
 				BDC1F2CF2B34CBD9004DCA70 /* Helpers */,
@@ -188,6 +192,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DB3F74642B8115A600932579 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB3F74692B81163700932579 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DBC80A232B405EAB00C621CF /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +253,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
 			);
 			mainGroup = BD79A0E72B33840600E4BE31;
 			packageReferences = (
@@ -261,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD79A0FB2B33840700E4BE31 /* Preview Assets.xcassets in Resources */,
+				DB3F74672B81163700932579 /* Localizable.strings in Resources */,
 				BD79A0F82B33840700E4BE31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +314,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB3F74692B81163700932579 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3F746A2B81163900932579 /* en */,
+				DB3F746B2B81166E00932579 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BD79A1012B33840700E4BE31 /* Debug */ = {

@@ -23,7 +23,7 @@ struct OnboardingRootView: View {
                     .padding(.bottom, 20)
                     
 
-                Text("Merhaba")
+                Text(LocalizedStringKey("Welcome"))
                     .font(.title)
                     .foregroundColor(.white)
 
@@ -37,11 +37,11 @@ struct OnboardingRootView: View {
                         .padding(.top, 20)
 
                     VStack {
-                        Text("What's your name?")
+                        Text(LocalizedStringKey("What's your name?"))
                             .foregroundColor(.black)
                             .padding()
 
-                        TextField("Enter your Name", text: $userName)
+                        TextField(LocalizedStringKey("Enter your Name"), text: $userName)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: Color.SecondaryColor, backgroundColor: Color.PrimaryColor))
                             .foregroundColor(Color.TextColor)
                             .cornerRadius(20)
@@ -53,7 +53,7 @@ struct OnboardingRootView: View {
                             showOnboarding = false
                         }) {
                             Spacer()
-                            Text("Next")
+                            Text(LocalizedStringKey("Next"))
                                 .padding()
                                 .background(Color.PrimaryColor)
                                 .foregroundColor(Color.TextColor)

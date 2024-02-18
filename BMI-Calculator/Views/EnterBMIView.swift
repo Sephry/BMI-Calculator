@@ -156,7 +156,11 @@ struct EnterBMIView: View {
                                 Alert(
                                     title: Text("Uyarı"),
                                     message: Text(alertMessage),
-                                    dismissButton: .default(Text("Tamam"))
+//                                    dismissButton: .default(Text("Tamam")),
+                                    dismissButton: .default(Text("OK")) {
+                                                                        // Call dismiss() here as well
+                                                                        dismiss()
+                                                                    }
                                 )
                             }
                         Spacer()
@@ -183,10 +187,18 @@ struct EnterBMIView: View {
     }
     
     func AddBmi() {
-        let kgOrlbs = kgOrLbs == "Kg" ? true : false
-        let cmOrMetre = cmOrmetre == "Cm" ? true : false
-        DataController().addBmi(gender: gender, weight: weight, height: height, age: age, cmOrInches: cmOrMetre, kgOrlbs: kgOrlbs, context: managedObjContext)
-        dismiss()
+        if isAddButtonDisabled {
+                   alertMessage = "Lütfen tüm alanları doldurun."
+                   showAlert = true
+        } else {
+            let kgOrlbs = kgOrLbs == "Kg" ? true : false
+            let cmOrMetre = cmOrmetre == "Cm" ? true : false
+            DataController().addBmi(gender: gender, weight: weight, height: height, age: age, cmOrInches: cmOrMetre, kgOrlbs: kgOrlbs, context: managedObjContext)
+            showAlert = true
+            alertMessage = "Your BMI data has been saved."
+            currentTab = 5
+            dismiss()
+        }
     }
 }
 

@@ -31,7 +31,7 @@ struct BMIView: View {
                 
                 if bmiData.isEmpty {
                     VStack {
-                        Text("No BMI information found.")
+                        Text(LocalizedStringKey("No BMI information found."))
                             .foregroundColor(Color.TextColor)
                         Text("Please enter BMI.")
                             .foregroundColor(Color.TextColor)

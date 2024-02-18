@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  BMI-Calculator
+
+  Created by Alperen Aydın on 17.02.2024.
+  
+*/
+"Welcome" = "Willkommen";
+"What's your name?" = "Wie heißen Sie?";
+"Enter your Name" = "Gib deinen Namen ein";
+"Next" = "Nächste";
+ "No BMI information found." = "Keine BMI-Informationen gefunden.";
+
