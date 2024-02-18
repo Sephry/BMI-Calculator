@@ -18,7 +18,7 @@ struct ChartView: View {
             VStack {
                 Text("No BMI information found.")
                     .foregroundColor(Color.TextColor)
-                Text("Please enter BMI.")
+                Text(LocalizedStringKey("Please enter BMI."))
                     .foregroundColor(Color.TextColor)
             }
             .padding()

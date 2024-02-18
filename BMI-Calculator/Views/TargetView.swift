@@ -38,7 +38,7 @@ struct TargetView: View {
                     
                     if targetData.isEmpty
                     {
-                        Text("What is your BMI goal?")
+                        Text(LocalizedStringKey("What is your BMI goal?"))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.subheadline)
                             .padding(.leading, 40)
@@ -61,7 +61,7 @@ struct TargetView: View {
                         .scaledToFit()
                     
                     HStack {
-                        Text("Weight")
+                        Text(LocalizedStringKey("Weight"))
                             .padding()
                         TextField("Wight", value: $weight, format: .number)
                             .keyboardType(.numberPad)

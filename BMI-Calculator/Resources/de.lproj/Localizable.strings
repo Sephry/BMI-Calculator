@@ -9,5 +9,8 @@
 "What's your name?" = "Wie heißen Sie?";
 "Enter your Name" = "Gib deinen Namen ein";
 "Next" = "Nächste";
- "No BMI information found." = "Keine BMI-Informationen gefunden.";
+"No BMI information found." = "Keine BMI-Informationen gefunden.";
+"Please enter BMI." = "Bitte geben Sie den BMI ein.";
+"What is your BMI goal?" = "Was ist Ihr BMI-Ziel?";
+"Weight" = "Gewicht";
 
