@@ -46,19 +46,41 @@ struct BMIView: View {
                             }
                         }
                         
+//                        ForEach(bmiData) { bmiData in
+//                            NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
+//                                get: { selectedBmi == bmiData },
+//                                set: { _ in selectedBmi = nil }
+//                            )) {
+//                                HStack {
+//                                    VStack {
+//                                        Text("\(bmiData.bmiResult.removeTrailingZeros())")
+//                                    }
+//                                }
+//                            }
+//                            
+//                        }
                         ForEach(bmiData) { bmiData in
-                            NavigationLink(destination: SheetView(bmiData: bmiData), isActive: Binding(
-                                get: { selectedBmi == bmiData },
-                                set: { _ in selectedBmi = nil }
-                            )) {
-                                HStack {
-                                    VStack {
-                                        Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                            if let bmiData = bmiData as? Bmi {
+                                NavigationLink(destination: SheetView(currentTab: $currentTab, bmiData: bmiData, onDelete: {
+                                    managedObjContext.delete(bmiData)
+                                    do {
+                                        try managedObjContext.save()
+                                    } catch {
+                                        print("Hata: Veri silinemedi - \(error)")
+                                    }
+                                }), isActive: Binding(
+                                    get: { selectedBmi == bmiData },
+                                    set: { _ in selectedBmi = nil }
+                                )) {
+                                    HStack {
+                                        VStack {
+                                            Text("\(bmiData.bmiResult.removeTrailingZeros())")
+                                        }
                                     }
                                 }
                             }
-                            
                         }
+
                     }
                 }
             }
