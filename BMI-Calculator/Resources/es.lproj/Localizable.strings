@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  BMI-Calculator
+
+  Created by Alperen Aydın on 17.02.2024.
+  
+*/
+"Welcome" = "Bienvenido";
+"What's your name?" = "¿Cuál es tu nombre?";
+"Enter your Name" = "Introduzca su nombre";
+"Next" = "Siguiente";
+"No BMI information found." = "No se ha encontrado información sobre el IMC";
+"Please enter BMI." = "Por favor, introduzca el IMC";
+"What is your BMI goal?" = "¿Cuál es su objetivo de IMC?";
+"Weight" = "Peso";

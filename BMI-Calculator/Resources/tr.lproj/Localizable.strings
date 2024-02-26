@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  BMI-Calculator
+
+  Created by Alperen Aydın on 17.02.2024.
+  
+*/
+"Welcome" = "Hoş Geldiniz";
+"What's your name?" = "Adınız Nedir ?";
+"Enter your Name" = "Adınızı Giriniz";
+"Next" = "İleri";
+"No BMI information found." = "BMI bilgisi bulunamadı.";
+"Please enter BMI." = "Lütfen BMI değerini girin.";
+"What is your BMI goal?" = "BMI hedefiniz nedir?";
+"Weight" = "Ağırlık";
