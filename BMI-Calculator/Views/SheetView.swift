@@ -15,8 +15,8 @@ struct SheetView: View {
     var onDelete: (() -> Void)?
     @State private var isDeleted: Bool = false
     @Environment(\.presentationMode) var presentationMode
-
-
+    
+    
     
     var body: some View {
         ZStack{
@@ -145,22 +145,7 @@ struct SheetView: View {
                             Text("≥ 40.0")
                         }
                         
-                        Button(action: {
-                            onDelete?() // Silme işlemini gerçekleştir
-                            isDeleted = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                // Bildirim gösterildikten sonra BMIView sayfasına yönlendir
-                                isDeleted = false // Bildirim gösterildiğinden emin olmak için isDeleted'i sıfırla
-                                currentTab = 5 // BMIView sayfasına yönlendir
-                                presentationMode.wrappedValue.dismiss() // Sheet'i kapat
-                            }
-                        }) {
-                            Text("Sil")
-                                .foregroundColor(.red)
-                        }
-
-
-
+                        
                     }
                     .padding(.horizontal, 35)
                     .background(
@@ -178,6 +163,23 @@ struct SheetView: View {
                 
             }
         }
+        .navigationBarItems(trailing:
+                                Button(action: {
+            onDelete?() // Silme işlemini gerçekleştir
+            isDeleted = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                // Bildirim gösterildikten sonra BMIView sayfasına yönlendir
+                isDeleted = false // Bildirim gösterildiğinden emin olmak için isDeleted'i sıfırla
+                currentTab = 5 // BMIView sayfasına yönlendir
+                presentationMode.wrappedValue.dismiss() // Sheet'i kapat
+            }
+        }) {
+            Text("Sil")
+                .foregroundColor(.red)
+        }
+                            
+                            
+        )
         .ignoresSafeArea(.all)
     }
 }
