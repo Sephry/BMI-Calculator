@@ -5,11 +5,11 @@
   Created by Alperen Aydın on 17.02.2024.
   
 */
-"Welcome" = "Benvenuto";
+"Welcome" = "Benvenuto" ;
 "What's your name?" = "Come ti chiami?";
-"Enter your Name" = "Inserisci il tuo nome";
-"Next" = "Avanti";
-"No BMI information found." = "Nessuna informazione sul BMI trovata";
-"Please enter BMI." = "Inserire il valore dell'IMC."
+"Enter your Name" = "Inserisci il tuo nome" ;
+"Next" = "Avanti" ;
+"No BMI information found." = "Nessuna informazione sul BMI trovata" ;
+"Please enter BMI." = "Inserire il valore dell'IMC." ;
 "What is your BMI goal?" = "Qual è il vostro obiettivo di IMC?";
-"Weight" = "Peso";
+"Weight" = "Peso" ;

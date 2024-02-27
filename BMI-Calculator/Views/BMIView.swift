@@ -63,6 +63,12 @@ struct BMIView: View {
                                         VStack {
                                             Text("\(bmiData.bmiResult.removeTrailingZeros())")
                                         }
+                                        Spacer()
+                                        
+                                        VStack {
+                                            
+                                            Text("\(bmiData.date!.formatDate())")
+                                        }
                                     }
                                 }
                             }
