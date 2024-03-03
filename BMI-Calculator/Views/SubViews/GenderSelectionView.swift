@@ -13,7 +13,7 @@ struct GenderSelectionView: View {
         HStack(spacing:0){
             HStack{
                 Text("Male")
-                    .foregroundColor(isSelectedGenderMan ? .black : .black.opacity(0.35))
+                    .foregroundColor(isSelectedGenderMan ? Color.BackgroundColor : Color.TextColor.opacity(0.35))
                     .frame(maxWidth: .infinity)
             }
             .frame(height: 30)
@@ -28,7 +28,7 @@ struct GenderSelectionView: View {
             
             HStack{
                 Text("Female")
-                    .foregroundColor(!isSelectedGenderMan ? .black : .black.opacity(1))
+                    .foregroundColor(!isSelectedGenderMan ? Color.BackgroundColor : Color.TextColor.opacity(0.35))
                     .frame(maxWidth: .infinity)
                 
             }

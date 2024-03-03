@@ -49,7 +49,7 @@ struct TabsView: View {
                                             }
                                     }
 //                                    .foregroundColor(selectedTab == item.rawValue ? .red : .gray)
-                                    .foregroundColor(Color.PrimaryColor)
+                                    .foregroundColor(Color.BackgroundColor)
                                     .frame(maxWidth: .infinity)
                                     
                                 }
@@ -77,9 +77,9 @@ struct TabsView: View {
                     .padding(.horizontal)
                 }
                 .padding(.top,5)
-                .background(
-                    Color.PrimaryColor
-                )
+                .background {
+                    Color.BackgroundColor
+                }
             }
         }
     }

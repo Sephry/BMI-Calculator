@@ -40,7 +40,7 @@ struct EnterBMIView: View {
                         .padding(.all, 10)
                 }
                 .background(
-                    Color.PrimaryColor
+                    Color.BackgroundColor
                 )
             }
             
@@ -79,19 +79,21 @@ struct EnterBMIView: View {
                     HStack {
                         Text("Age")
                             .padding()
+                            .foregroundColor(Color.TextColor)
                         TextField("Age", value: $age, format: .number)
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
-                            .foregroundColor(Color.TextColor)
+                            .foregroundColor(Color.BackgroundColor)
                             .padding()
                     }
                     HStack {
                         Text("Height")
                             .padding()
+                            .foregroundColor(Color.TextColor)
                         TextField("Height", value: $height, format: .number)
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
-                            .foregroundColor(Color.TextColor)
+                            .foregroundColor(Color.BackgroundColor)
                             .padding(.leading)
                         
                         Menu {
@@ -114,10 +116,12 @@ struct EnterBMIView: View {
                     HStack {
                         Text("Weight")
                             .padding()
+                            .foregroundColor(Color.TextColor)
+
                         TextField("Wight", value: $weight, format: .number)
                             .keyboardType(.numberPad)
                             .textFieldStyle(CustomTextFieldStyle(borderColor: .SecondaryColor, backgroundColor: .PrimaryColor))
-                            .foregroundColor(Color.TextColor)
+                            .foregroundColor(Color.BackgroundColor)
                             .background{
                                 RoundedRectangle(cornerRadius: 8)
                             }
@@ -147,7 +151,7 @@ struct EnterBMIView: View {
                         Spacer()
                         Button("Submit", action: validateFields)
                         //                            .disabled(isAddButtonDisabled)
-                            .foregroundColor(Color.TextColor)
+                            .foregroundColor(Color.BackgroundColor)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.PrimaryColor)
